@@ -1,0 +1,11 @@
+import esa.abstract_data.array as array
+import esa.abstract_data.tensor as tensor
+
+
+abstract domain controls {
+    default reference fftw
+
+    capability mpc(input int n_state,
+                   input int n_ctrl,
+                   input int T)
+}

@@ -1,0 +1,55 @@
+// OHAI Abstract Data Types are not implemented yet.
+import ohai.adt.Image as Image
+import ohai.adt.Image.Point as Point
+import ohai.adt.Integer as Integer
+import ohai.adt.Double as Double
+import ohai.adt.List as List
+
+
+abstract domain computer_vision {
+    // Default reference implmentation of this domain is OpenCV (Python)
+    default reference opencv
+
+    capability grayscale(input Image img_in,
+			 output Image img_out)
+
+    capability gaussian_blur(input Image img_in,
+    	       	 	     param List kernel_size,
+			     param Integer sigma_x,
+			     output Image img_out)
+
+    capability threshold(input Image img_in,
+			 param Double thresh,
+			 param Double maxval,
+			 param Integer type,
+			 output Image img_out)
+
+    capability bitwise_not(input Image img_int,
+			   output Image img_out)
+
+    capability find_contours(input Image img_in,
+			     param Integer mode,
+			     param Integer method,
+			     output List contours)
+
+    capability contour_area(input List contour,
+			    output double area)
+
+    capability draw_contours(input Image img_in,
+			     input List contours,
+			     input Integer contour_idx,
+			     input String color,
+			     output Image img_out)
+
+    capability bounding_rect(input List points,
+			     output List rect)
+
+    capability imread(input String img_file,
+                      output Image img)
+
+    capability imwrite(input String img_file,
+                       input Image img)
+
+    capability doublify(input Image arr_in,
+    	       		output Image arr_out)
+}

@@ -1,0 +1,15 @@
+abstract data Image<T> {
+    array<T> image;
+
+    Image() {
+
+    }
+
+    capability get_shape() {
+
+    }
+
+    capability get_data() {
+
+    }
+}

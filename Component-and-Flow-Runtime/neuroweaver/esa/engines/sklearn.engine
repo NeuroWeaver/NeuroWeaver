@@ -1,0 +1,30 @@
+import ohai.sw_interfaces as inouts
+
+engine sklearn implements analytics {
+
+    interface input_mem = inouts.fifo
+    interface output_mem = inouts.fifo
+    interface weight_mem = inouts.fifo
+    interface cfg = inouts.config
+
+
+    capability logistic_regression(input_mem array in_x,
+                                   input_mem array in_y,
+                                   weight_mem array weight,
+                                   cfg int learning_rate)
+    {
+        language: Python,
+        file: "/Users/joon/neuroweaver/esa/engines/impl/sklearn/sklearn_engine.py",
+	runtime_cost: 7
+    }
+
+    capability svm(input_mem array in_x,
+                   input array in_y,
+                   state array weight,
+                   param int leanring_rate)
+    {
+        language: Python,
+        file: "/Users/joon/neuroweaver/esa/engines/impl/sklearn/sklearn_engine.py",
+	runtime_cost: 3
+    }
+}

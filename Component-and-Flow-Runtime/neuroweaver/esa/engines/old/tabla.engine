@@ -1,0 +1,87 @@
+import ohai.hw_interfaces as inouts;
+
+engine Tabla implements data_analytics {
+
+    default reference tabla_impl {
+        lang = "python";
+        code = "tabla.py";
+    }
+
+    interface input_mem = inouts.fifo;
+    interface output_mem = inouts.fifo;
+    interface inout_mem = inouts.fifo;
+    interface scratch_mem = inouts.*;
+    interface cfg = inouts.config;
+
+    // element-wise operations
+    capability vector_add_vector(
+    	input_mem fxp16[] v_in1,
+        input_mem fxp16[] v_in2,
+	output_mem fxp16[] v_out
+    );
+
+    capability vector_subtract_vector
+        inout_mem fxp16[] v_in1,
+        input_mem fxp16[] v_in2,
+	output_mem fxp16[] v_out
+    );
+
+    capability vector_divide_vector(
+        inout_mem fxp16[] v_in1,
+        input_mem fxp16[] v_in2,
+	output_mem fxp16[] v_out
+    );
+
+    capability vector_mult_vector(
+        inout_mem fxp16[] v_in1,
+        input_mem fxp16[] v_in2,
+	output_mem fxp16[] v_out
+    );
+
+    capability matrix_add_matrix(
+        inout_mem fxp[][] m_in1,
+        input_mem fxp[][] m_in2,
+	output_mem fxp16[] m_out
+    );
+
+    capability matrix_subtract_matrix(
+        inout_mem fxp[][] m_in1,
+        input_mem fxp[][] m_in2,
+	output_mem fxp16[] m_out
+    );
+
+    capability matrix_divide_matrix(
+        inout_mem fxp[][] m_in1,
+        input_mem fxp[][] m_in2,
+	output_mem fxp16[] m_out
+    );
+
+    capability sigmoid(
+        input_mem fxp16 a,
+	output_mem fxp16 b
+    );
+
+    // non-element-wise operations
+    capability vector_dot_prod(
+    	input_mem fxp16[] v_in1,
+        input_mem fxp16[] v_in2,
+	output_mem fxp16 v_out
+    ) touches scratch_mem;
+
+    capability matrix_multiply_vector(
+        inout_mem fxp[][] m_in1,
+        input_mem fxp[][] m_in2,
+	output_mem fxp16[] m_out
+    ) touches scratch_mem;
+
+    capability matrix_multiply_matrix(
+        inout_mem fxp[][] m_in1,
+        input_mem fxp[][] m_in2,
+	output_mem fxp16[][] m_out
+    ) touches scratch_mem;
+
+    fusion {
+        vector_add_vector: [vector_subtract_vector, vector_divide_vector, vector_mult_vector],
+	vector_subtract_vector: [vector_add_vector, vector_divide_vector]
+    }
+}

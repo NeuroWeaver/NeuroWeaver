@@ -1,0 +1,47 @@
+// OHAI Abstract Data Types are not implemented yet.
+import ohai.adt.Tensor as Tensor
+import ohai.adt.Integer as Integer
+import ohai.adt.List as List
+
+
+abstract domain deep_learning {
+    // Default reference implmentation of this domain is tensorflow.
+    // This can be changed to any engines implementing this domain, as long as
+    // the engine implements all capabilities in this domain.
+    default reference tensorflow
+
+    // Abstract capabilities only provides the programming interface, not
+    // the implementation. Implementation is provided by the engine.
+    capability conv2d(input Tensor t_in,
+                      state Tensor weights,
+		      state Tensor biases,
+                      param Integer strides,
+                      param String padding,
+                      output Tensor t_out)
+
+    capability bias_add(input Tensor t_in,
+                        state Tensor weights,
+                        output Tensor t_out)
+
+    capability batch_normalization(input Tensor t_in,
+                                   state Tensor mean,
+                                   state Tensor variance,
+                                   state Tensor gamma,
+                                   output Tensor t_out)
+
+    capability maximum(input Tensor t_in1,
+    	       	       input Tensor t_in2,
+    	               output Tensor t_out)
+
+    capability max_pool(input Tensor t_in,
+                        param Integer ksize,
+                        param Integer strides,
+                        param String padding,
+                        output Tensor t_out)
+
+    capability matmul(input Tensor t_in1,
+    	       	      input Tensor t_in2,
+                      output Tensor t_out)
+
+    capability compile_model(input String t_in1)
+}

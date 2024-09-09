@@ -1,0 +1,17 @@
+import ohai.adt.Image as image;
+
+abstract domain stdio {
+
+    default reference standard_io = {
+        language = "C";
+	file = "stdio.h";
+    }
+
+    capability read_stdin(output char c) {
+        reference standard_io;
+    }
+
+    capability display(input Image c) {
+        reference standard_io;
+    }
+}

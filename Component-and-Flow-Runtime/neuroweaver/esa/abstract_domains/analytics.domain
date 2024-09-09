@@ -1,0 +1,10 @@
+import ohai.adt.Tensor as Tensor
+
+
+abstract domain analytics {
+    default reference fftw
+
+    capability linear_regression(input Tensor t_in,
+    	       			 state Tensor weights,
+				 output Tensor weights_updated)
+}

@@ -1,0 +1,58 @@
+import ohai.hw_interfaces as inouts;
+
+import ohai.abstract.computer_vision as cv;
+
+engine c66x implements cv {
+
+    default reference c66x_impl = {
+        lang = "C",
+	directory = "/usr/local/lib/c66x"
+    }
+
+    interface input_mem = inouts.fifo;
+    interface output_mem = inouts.fifo;
+    interface scratch_mem = inouts.*;
+    interface config = inouts.config
+
+    capability cvtColor(output_mem uint8[][][] img,
+    	       		input_mem char[] code
+    ) touches scratch_mem;
+
+    capability GaussianBlur(output_mem uint8[][][] out_img,
+    	       		    input_mem uint8[][][] in_img,
+    	       		    config tuple<int, int> kernel_size,
+			    config int sigma_x
+    ) touches scratch_mem;
+
+    capability threshold(output_mem uint8[][][] out_img,
+    	       		 input_mem uint8[][][] in_img,
+			 config double thresh,
+			 config double maxval,
+			 config int type
+    ) touches scratch_mem;
+
+    capability bitwise_not(output_mem uint8[][][] out_img,
+    	       		   input_mem  uint8[][][] in_img
+    ) touches scratch_mem;
+
+    capability findContours(output_mem uint8[][][] contours,
+    	       		    input_mem uint8[][][] in_img,
+			    config int mode,
+			    config int method
+    ) touches scratch_mem;
+
+    capability contourArea(output_mem double area,
+    	                   input_mem uint8[][][] contour
+    ) touches scratch_mem;
+
+    fusion {
+        cvtColor: [GaussianBlur, findContours, drawContours, boundingRect],
+	GaussianBlur: [threshold, bitwise_not, findContours],
+	threshold: [bitwise_not, findContours],
+	bitwise_not: [findContours, drawContours],
+	findContours: [contourArea, drawContours, boundingRect],
+	contourArea: [drawContours, boundingRect],
+	drawContours: [boundingRect],
+	boundingRect: [];
+    }
+}

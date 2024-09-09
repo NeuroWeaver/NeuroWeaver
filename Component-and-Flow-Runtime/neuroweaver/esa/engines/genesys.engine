@@ -1,0 +1,16 @@
+import ohai.sw_interfaces as inouts
+import tensorflow as tf
+
+
+engine genesys implements deep_learning {
+
+    interface input_mem = inouts.fifo
+
+    capability compile_model(input_mem String t_in1)
+    {
+        language: Python,
+        file: "./impl/genesys/genesys_engine.py",
+	    runtime_cost: 10
+    }
+
+}

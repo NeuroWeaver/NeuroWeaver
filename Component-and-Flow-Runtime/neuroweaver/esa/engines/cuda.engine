@@ -1,0 +1,83 @@
+import ohai.hw_interfaces as inouts
+
+
+engine cuda implements computer_vision {
+
+    interface input_mem = inouts.fifo
+    interface output_mem = inouts.fifo
+    interface weight_mem = inouts.fifo
+    interface scratch_mem = inouts.*
+    interface cfg = inouts.config
+
+    // // Note: disregard the data types (fxp16) for now. Will be handled later.
+    // capability conv2d(input_mem fxp16[][][][] t_in,
+    // 		      weight_mem fxp16[][][][] weights,
+    // 		      cfg int[] strides,
+    // 		      cfg char[] padding,
+    // 		      output_mem fxp16[][][][] t_out)
+    // {
+    //     runtime: cuda,
+    // 	kernel_file: "/Users/joon/ohai.src/esa/engines/impl/cuda/conv2d.cu"
+    // }
+
+    // capability bias_add(input_mem fxp16[][][][] t_in,
+    // 		        weight_mem fxp16[][][][] weights,
+    // 			output_mem fxp16[][][][] t_out)
+    // {
+    //     runtime: cuda,
+    // 	kernel_file: "/Users/joon/ohai.src/esa/engines/impl/cuda/bias_add.cu"
+    // }
+
+    // capability batch_normalization(input_mem fxp16[][][][] t_in,
+    // 		                   weight_mem fxp16[][][][] mean,
+    // 				   weight_mem fxp16[][][][] variance,
+    // 				   weight_mem fxp16[][][][] gamma,
+    // 				   output_mem fxp16[][][][] t_out)
+    // {
+    //     runtime: cuda,
+    // 	kernel_file: "/Users/joon/ohai.src/esa/engines/impl/cuda/batch_normalization.cu"
+    // }
+
+    // capability maximum(input_mem fxp16[][][][] t_in1,
+    // 	       	       input_mem fxp16[][][][] t_in2,
+    // 	               output_mem fxp16[][][][] t_out)
+    // {
+    //     runtime: cuda,
+    // 	kernel_file: "/Users/joon/ohai.src/esa/engines/impl/cuda/maximum.cu"
+    // }
+
+    // capability max_pool(input_mem fxp16[][][][] t_in,
+    // 			cfg fxp16 ksize,
+    // 			cfg fxp16 strides,
+    // 			cfg fxp16 padding,
+    // 			output_mem fxp16[][][][] t_out)
+    // {
+    //     runtime: cuda,
+    // 	kernel_file: "/Users/joon/ohai.src/esa/engines/impl/cuda/max_pool.cu"
+    // }
+
+    // capability matmul(input_mem fxp[][] t_in1,
+    // 	              input_mem fxp[][] t_in2,
+    // 		      output_mem fxp[][] t_out)
+    // {
+    //     runtime: cuda,
+    // 	kernel_file: "/Users/joon/ohai.src/esa/engines/impl/cuda/matmul.cu"
+    // }
+
+    capability doublify(input_mem fxp[][] arr_in,
+    	       		output_mem fxp[][] arr_out)
+    {
+        file: "/home/joon/ohai.src/esa/engines/impl/cuda/cuda_engine.py",
+	runtime_cost: 2
+    }
+
+
+    // fusion {
+    //     conv2d               : [bias_add],
+    //     bias_add             : [batch_normalization],
+    //     batch_normalization  : [maximum],
+    //     maximum              : [max_pool],
+    //     max_pool             : [conv2d],
+    //     matmul               : []
+    // }
+}

@@ -1,0 +1,88 @@
+import ohai.hw_interfaces as inouts
+
+
+engine cudnn implements deep_learning {
+
+    interface input_mem = inouts.fifo
+    interface output_mem = inouts.fifo
+    interface weight_mem = inouts.fifo
+    interface scratch_mem = inouts.*
+    interface cfg = inouts.config
+
+    // Note: disregard the data types (fxp16) for now. Will be handled later.
+    capability conv2d(input_mem fxp16[][][][] t_in,
+		      weight_mem fxp16[][][][] weights,
+		      cfg fxp16 strides,
+		      cfg fxp16 padding,
+		      output_mem fxp16[][][][] t_out)
+    {
+        language: C++,
+        compiler: nvcc,
+        runtime: cuda,
+	file: "/Users/joon/ohai.src/esa/engines/impl/cudnn/conv2d.cpp"
+    }
+
+    capability bias_add(input_mem fxp16[][][][] t_in,
+		        weight_mem fxp16[][][][] weights,
+			output_mem fxp16[][][][] t_out)
+    {
+        language: C++,
+        compiler: nvcc,
+        runtime: cuda,
+	file: "/Users/joon/ohai.src/esa/engines/impl/cudnn/bias_add.cpp"
+    }
+
+    capability batch_normalization(input_mem fxp16[][][][] t_in,
+		                   weight_mem fxp16[][][][] mean,
+				   weight_mem fxp16[][][][] variance,
+				   weight_mem fxp16[][][][] gamma,
+				   output_mem fxp16[][][][] t_out)
+    {
+        language: C++,
+        compiler: nvcc,
+        runtime: cuda,
+	file: "/Users/joon/ohai.src/esa/engines/impl/cudnn/batch_normalization.cpp"
+    }
+
+    capability maximum(input_mem fxp16[][][][] t_in1,
+    	       	       input_mem fxp16[][][][] t_in2,
+    	               output_mem fxp16[][][][] t_out)
+    {
+        language: C++,
+        compiler: nvcc,
+        runtime: cuda,
+	file: "/Users/joon/ohai.src/esa/engines/impl/cudnn/maximum.cpp"
+    }
+
+    capability max_pool(input_mem fxp16[][][][] t_in,
+			cfg fxp16 ksize,
+			cfg fxp16 strides,
+			cfg fxp16 padding,
+			output_mem fxp16[][][][] t_out)
+    {
+        language: C++,
+        compiler: nvcc,
+        runtime: cuda,
+	file: "/Users/joon/ohai.src/esa/engines/impl/cudnn/max_pool.cpp"
+    }
+
+    capability matmul(input_mem fxp[][] t_in1,
+    	              input_mem fxp[][] t_in2,
+		      output_mem fxp[][] t_out)
+    {
+        language: C++,
+        compiler: nvcc,
+        runtime: cuda,
+	file: "/Users/joon/ohai.src/esa/engines/impl/cudnn/matmul.cpp"
+    }
+
+
+    fusion {
+        conv2d               : [bias_add],
+        bias_add             : [batch_normalization],
+        batch_normalization  : [maximum],
+        maximum              : [max_pool],
+        max_pool             : [conv2d],
+        matmul               : []
+    }
+}

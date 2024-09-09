@@ -1,0 +1,20 @@
+import ohai.sw_interfaces as inouts
+
+engine numpy implements digital_signal_processing {
+
+    interface input_mem = inouts.fifo
+    interface output_mem = inouts.fifo
+    interface cfg = inouts.config
+
+
+    capability fft(input_mem array in_array,
+                   output_mem array out_array,
+                   cfg int length,
+                   cfg int axis,
+                   cfg string norm)
+    {
+        language: Python,
+        file: "/Users/joon/neuroweaver/esa/engines/impl/np/numpy_engine.py",
+	runtime_cost: 5
+    }
+}

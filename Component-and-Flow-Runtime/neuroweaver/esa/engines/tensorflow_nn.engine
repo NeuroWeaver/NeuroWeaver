@@ -1,0 +1,22 @@
+import ohai.sw_interfaces as inouts
+import tensorflow as tf
+
+
+engine tensorflow implements deep_learning {
+
+    interface input_mem = inouts.fifo
+    interface output_mem = inouts.fifo
+    interface weight_mem = inouts.fifo
+    interface scratch_mem = inouts.*
+    interface cfg = inouts.config
+
+    capability matmul(input_mem Tensor t_in1,
+    	              input_mem Tensor t_in2,
+		              output_mem Tensor t_out)
+    {
+        language: Python,
+        file: "./impl/tf/tensorflow_engine.py",
+	    runtime_cost: 10
+    }
+
+}

@@ -1,0 +1,28 @@
+import ohai.hw_interfaces as inouts
+
+engine test implements deep_learning {
+    interface input_mem = inouts.fifo
+    interface output_mem = inouts.fifo
+    interface weight_mem = inouts.fifo
+    interface scratch_mem = inouts.*
+    interface cfg = inouts.config
+
+    capability conv2d(
+		output_mem fxp16[][][][] y,
+		input_mem fxp16[][][][] x,
+		weight_mem fpx16[][][][] w,
+		cfg stride=[1, 2, 4],
+		cfg padding=["valid", "same"],
+		cfg dilation=[1]
+    ) touches scratch_mem {
+        language: Python
+    }
+
+    capability matmul(input_mem fxp[][] A,
+    	              input_mem fxp[][] B,
+		      output_mem fxp[][] C
+    ) {
+        language: Python,
+	file: "/Users/joon/scratch/python/matmul.py"
+    }
+}

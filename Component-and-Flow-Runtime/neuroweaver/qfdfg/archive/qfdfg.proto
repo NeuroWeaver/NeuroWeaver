@@ -1,0 +1,220 @@
+syntax = "proto3";
+
+package qfdfg;
+
+import "types.proto";
+
+
+message Component {
+	// Unique Component id
+	int64 cid = 1;
+
+	// Component definition name
+	// In Python-embedded C&F, this is the part that comes after the 'as' statement.
+	string name = 11;
+
+	// Component instance name
+	string instance_name = 2;
+
+	// To support multiple edges from same node
+	message FlowList {
+		repeated Flow flows = 1;
+	}
+
+	// Map from parent Component name to Flow
+	map<string, FlowList> inputs = 3;
+
+	// Map from child Component name to Flow
+	map<string, FlowList> outputs = 4;
+
+	// Persistent State of this Component
+	repeated Flow state = 9;
+	repeated Attribute params = 10;
+
+	// List of sub-Components
+	repeated Component sub_components = 5;
+
+	// We explicitly use the 'repeated' keyword for recursive attributes
+	repeated Component super_component = 6;
+
+	// Component body: the functionality of this Component
+	repeated string body = 7;
+
+	// Component definition header
+	repeated string header = 17;
+
+	repeated string preambles = 18;
+
+	// TODO: These will be metadata.
+	// TODO: Append 'verbatim' to names.
+	repeated string input_args = 12;
+	repeated string output_vals = 13;
+	repeated string state_args = 22;
+	repeated string param_args = 23;
+	repeated string channels = 26;
+
+	string obj_filename = 14;
+	string obj_code = 16;
+	// Flag to determine whether this component is an abstract domain capability
+	string domain_name = 21;
+
+	// Compilation target
+	string target = 15;
+
+	// From graph connectivity
+	repeated string output_names = 19;
+	repeated string input_names = 20;
+
+        string engine_name = 24;
+
+        int64 iter_count = 25;
+
+	// TODO: add an attribute for source line number
+}
+
+message Flow {
+
+	FlowInfo info = 1;
+
+	// Tensor content must be organized in row-major order.
+	//
+	// Depending on the data_type field, exactly one of the fields below with
+	// name ending in _data is used to store the elements of the tensor.
+
+	// For float and complex64 values
+	// Complex64 tensors are encoded as a single array of floats,
+	// with the real components appearing in odd numbered positions,
+	// and the corresponding imaginary component apparing in the
+	// subsequent even numbered position. (e.g., [1.0 + 2.0i, 3.0 + 4.0i]
+	// is encoded as [1.0, 2.0 ,3.0 ,4.0]
+	// When this field is present, the data_type field MUST be FLOAT or COMPLEX64.
+	repeated float float_data = 2 [packed = true];
+
+	// For int32, uint8, int8, uint16, int16, bool, and float16 values
+	// float16 values must be bit-wise converted to an uint16_t prior
+	// to writing to the buffer.
+	// When this field is present, the data_type field MUST be
+	// INT32, INT16, INT8, UINT16, UINT8, BOOL, or FLOAT16
+	repeated int32 int32_data = 3 [packed = true];
+
+	// For strings.
+	// Each element of string_data is a UTF-8 encoded Unicode
+	// string. No trailing null, no leading BOM. The protobuf "string"
+	// scalar type is not used to match ML community conventions.
+	// When this field is present, the data_type field MUST be STRING
+	repeated bytes string_data = 4;
+
+	// For int64.
+	// When this field is present, the data_type field MUST be INT64
+	repeated int64 int64_data = 5 [packed = true];
+
+
+	// Serializations can either use one of the fields above, or use this
+	// raw bytes field. The only exception is the string case, where one is
+	// required to store the content in the repeated bytes string_data field.
+	//
+	// When this raw_data field is used to store tensor value, elements MUST
+	// be stored in as fixed-width, little-endian order.
+	// Floating-point data types MUST be stored in IEEE 754 format.
+	// Complex64 elements must be written as two consecutive FLOAT values, real component first.
+	// Complex128 elements must be written as two consecutive DOUBLE values, real component first.
+	// Boolean type MUST be written one byte per tensor element (00000001 for true, 00000000 for false).
+	//
+	// Note: the advantage of specific field rather than the raw_data field is
+	// that in some cases (e.g. int data), protobuf does a better packing via
+	// variable length storage, and may lead to smaller binary footprint.
+	// When this field is present, the data_type field MUST NOT be STRING or UNDEFINED
+	bytes raw_data = 6;
+
+	// For double
+	// Complex128 tensors are encoded as a single array of doubles,
+	// with the real components appearing in odd numbered positions,
+	// and the corresponding imaginary component apparing in the
+	// subsequent even numbered position. (e.g., [1.0 + 2.0i, 3.0 + 4.0i]
+	// is encoded as [1.0, 2.0 ,3.0 ,4.0]
+	// When this field is present, the data_type field MUST be DOUBLE or COMPLEX128
+	repeated double double_data = 7 [packed = true];
+
+	// For uint64 and uint32 values
+	// When this field is present, the data_type field MUST be
+	// UINT32 or UINT64
+	repeated uint64 uint64_data = 8 [packed = true];
+	map<string, Attribute> attributes = 9;
+}
+
+message FlowInfo {
+	// Unique Flow id
+	int64 fid = 1;
+
+	// Source component unique ID
+	int64 cid = 2;
+
+	int64 child_cid = 15;
+
+	// Parent component definition name
+	string src_comp_name = 3;
+
+	string dst_comp_name = 13;
+
+	// Variable name of this flow from C&F source code
+	string var_name = 14;
+
+	// Local name unique within Component
+	string local_name = 4;
+
+	DataType type = 5;
+
+	repeated int64 dims = 6;
+
+	int64 item_count = 7;
+	int64 destination_index = 8;
+	bool is_queue = 9;
+	bool is_state = 10;
+	bool is_parameter = 11;
+
+	// A human-readable documentation. Markdown is allowed.
+	string doc_string = 12;
+}
+
+message Graph {
+	// The nodes in the graph, maintained in an adjacency list format
+	repeated Component components = 1;
+
+	// Definitions of components
+	repeated Component component_defs = 3;
+
+	// The name of the graph
+	string name = 2;
+}
+
+message Attribute {
+	// LINT.IfChange
+	message ListValue {
+		repeated bytes s = 2;                        // "list(string)"
+		repeated int64 i = 3 [packed = true];        // "list(int)"
+		repeated float f = 4 [packed = true];        // "list(float)"
+		repeated bool b = 5 [packed = true];         // "list(bool)"
+		repeated DataType type = 6 [packed = true];  // "list(type)"
+		repeated Flow edges = 8;             // "list(edges)"
+	}
+	// LINT.ThenChange(https://www.tensorflow.org/code/tensorflow/c/c_api.cc)
+
+	oneof value {
+		bytes s = 2;                 // "string"
+		int64 i = 3;                 // "int"
+		float f = 4;                 // "float"
+		bool b = 5;                  // "bool"
+		DataType type = 6;           // "type"
+		Flow edge = 8;               // "edge"
+		ListValue list = 1;          // any "list(...)"
+
+		// This is a placeholder only used in nodes defined inside a
+		// function.  It indicates the attr value will be supplied when
+		// the function is instantiated.  For example, let us suppose a
+		// node "N" in function "FN". "N" has an attr "A" with value
+		// placeholder = "foo". When FN is instantiated with attr "foo"
+		// set to "bar", the instantiated node N's attr A will have been
+		// given the value "bar".
+		string placeholder = 9;
+	}
+}

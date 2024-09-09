@@ -1,0 +1,17 @@
+To build the docker image, run:
+
+./build.sh
+
+
+To run a docker container for the image, run:
+
+docker run neuroweaver:bayesian
+
+
+To run the container in an interactive bash shell, run:
+
+docker run -it neuroweaver:bayesian bash
+
+and then, run:
+
+./run.sh cnf/cnf_meanfield.py

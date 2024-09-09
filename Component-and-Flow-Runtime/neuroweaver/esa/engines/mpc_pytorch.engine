@@ -1,0 +1,18 @@
+import ohai.sw_interfaces as inouts
+
+engine mpc_pytorch implements controls {
+
+    interface input_mem = inouts.fifo
+    interface output_mem = inouts.fifo
+    interface weight_mem = inouts.fifo
+    interface cfg = inouts.config
+
+    capability mpc(input_mem int n_state,
+                   input_mem int n_ctrl,
+                   input_mem int T)
+    {
+        language: Python,
+        file: "/Users/joon/neuroweaver/esa/engines/impl/mpc_pytorch/mpc_pytorch_engine.py",
+	runtime_cost: 9
+    }
+}

@@ -1,0 +1,30 @@
+import ohai.adt.Tensor as Tensor
+import ohai.adt.Integer
+
+abstract domain deep_learning {
+    default reference tensorflow
+
+    capability conv2d(input Tensor t_in,
+    	       	      output Tensor t_out,
+		      state Tensor weights,
+		      param Integer dilation,
+		      param Integer stride,
+		      param String padding)
+
+    capability pool(input Tensor t_in,
+    	            output Tensor t_out)
+
+    capability batch_norm(input Tensor t_in,
+    	       		  output Tensor t_out)
+
+    capability flatten(input Tensor t_in,
+    	               output Tensor t_out)
+
+    capability fc(input Tensor t_in,
+    	          output Tensor t_out,
+		  state Tensor weights)
+
+    capability matmul(input Tensor A,
+    	       	      input Tensor B,
+		      output Tensor C)
+}

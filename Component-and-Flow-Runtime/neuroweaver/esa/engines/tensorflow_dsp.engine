@@ -1,0 +1,25 @@
+import ohai.sw_interfaces as inouts
+import tensorflow as tf
+
+
+engine tensorflow implements digital_signal_processing {
+
+    interface input_mem = inouts.fifo
+    interface output_mem = inouts.fifo
+    interface weight_mem = inouts.fifo
+    interface scratch_mem = inouts.*
+    interface cfg = inouts.config
+
+    capability fft(input_mem array in_array,
+                   output_mem array out_array,
+                   cfg int length,
+                   cfg int axis,
+                   cfg string norm)
+    {
+        language: Python,
+        file: "./esa/engines/impl/tf/tensorflow_engine.py",
+	runtime_cost: 5
+    }
+
+}
+

@@ -1,0 +1,148 @@
+syntax = "proto3";
+
+package esa;
+
+import "qfdfg.proto";
+import "types.proto";
+
+
+message AbstractDomainDefinition {
+	//  Name of this domain (e.g. Deep Learning)
+	string name = 1;
+
+	// List of abstract capabilities (component definitions)
+	repeated qfdfg.Component capabilities = 2;
+
+	// List of engines implementing this domain's capabilities.
+	// This will be filled out by esa parser.
+	repeated EngineSpecification engines = 3;
+
+	// Default engine for this domain.
+	EngineSpecification default_engine = 4;
+}
+
+message EngineSpecification {
+	// Engine name
+	string name = 1;
+
+	// Abstract Domain Definition that this engine implements
+	AbstractDomainDefinition domain = 2;
+
+	// Abstract Domain definition name
+	string domain_name = 5;
+
+	// List of declared memory interfaces for this engine
+	repeated MemoryInterface interfaces = 3;
+
+	// List of capabilities this engine implements
+	repeated CapabilityInfo capabilities = 4;
+}
+
+message MemoryInterface {
+	// Memory interface name
+	string name = 1;
+
+	// Definition of the direcionality. Default is uni.
+	enum Direction {
+		UNI = 0;
+		BI = 1;
+	}
+	Direction direction = 2;
+
+	// Definition of the data structure. Default is fifo.
+	enum Kind {
+		FIFO = 0;
+		LIFO = 1;
+		RANDOM = 2;
+	}
+	Kind kind = 3;
+
+	// Location of data copies. Default is dst.
+	enum Location {
+		SRC = 0;
+		DST = 1;
+		BOTH = 2;
+	}
+	Location location = 4;
+
+	// Memory consistency
+	enum Consistency {
+		STRICT = 0;
+		SEQUENTIAL = 1;
+		RELAXED = 2;
+		WEAK = 3;
+		RELEASE = 4;
+		EVENTUAL = 5;
+	}
+	Consistency consistency = 5;
+
+	// Memory coherency
+	enum Coherency {
+		ON = 0;
+		OFF = 1;
+	}
+	Coherency coherency = 6;
+
+	// Minimum and maximum size requirements. Default is no limitations.
+	int64 min_size = 7;
+	int64 max_size = 8;
+}
+
+message CapabilityInfo {
+	// Capability name (conv2d, etc.)
+	string name = 1;
+
+	// e.g. output_mem fxp16[][][][] y
+	repeated MemoryInterfaceWithType mem_interfaces = 2;
+
+	// e.g. touches scratch_mem
+	MemoryInterface touches = 3;
+
+	// Engine implementation of this capability
+	CapabilityImplementation impl = 4;
+
+        float runtime_cost = 5;
+}
+
+message MemoryInterfaceWithType {
+	// e.g. output_mem, input_mem, ...
+	//MemoryInterface mem_interface = 1;
+	string mem_interface_name = 1;
+
+	// e.g. fxp16[][][][]
+	qfdfg.DataType dtype = 2;
+	string dtype_string = 5;
+
+	// Variable name
+	string var = 3;
+
+	// Literal value
+	Value val = 4;
+}
+
+message CapabilityImplementation {
+	// e.g. Python
+	string language = 1;
+
+	// Code implementing this capability
+	string impl = 2;
+
+	// File path to the code
+	string filepath = 3;
+
+        // Runtime cost
+        float runtime_cost = 4;
+}
+
+message EngineOrg {
+	// "Engine system"
+	repeated AbstractDomainDefinition domains = 1;
+}
+
+message Value {
+	message ListValue {
+		repeated int64 i = 1;
+		repeated string s = 2;
+	}
+	ListValue values = 1;
+}

@@ -1,0 +1,29 @@
+abstract data Packet {
+    T data;
+    int source_ip;
+    int source_port;
+    int dest_ip;
+    int dest_port;
+
+    Packet(data, source_ip, source_port, dest_ip, dest_port) {
+       this.source_ip = source_ip;
+       this.source_port = source_port;
+       this.dest_ip = dest_ip;
+       this.dest_port = dest_port;
+    }
+
+    capability get_data() {
+        reference get_data = {
+	    language = "C";
+	    file: "/usr/lib/packet.h";
+	}
+    }
+
+    capability get_header() {
+
+    }
+
+    capability get_payload() {
+
+    }
+}

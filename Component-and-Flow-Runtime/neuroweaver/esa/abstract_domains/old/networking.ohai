@@ -1,0 +1,31 @@
+import ohai.adt.Packet as Packet;
+
+abstract domain networking {
+
+    // We use the standard networking functions already available currently
+    // as a reference implementation of this networking domain
+    default reference net = {
+        language: ”C”;
+	file: "sockets.c";
+    }
+
+    // Establishes a TCP conenction with the given destination host and sends a TCP packet
+    capability tcp_connection(output Packet out_packet,
+    	       		      input char data,
+			      param int src_ip,
+			      param int src_port,
+			      param int dst_ip,
+			      param int dst_port) {
+        reference net;
+    }
+
+    // Establishes a TCP conenction with the given destination host and sends a TCP packet
+    capability udp_connection(output Packet out_packet,
+    	       		      input char data,
+			      param int src_ip,
+			      param int src_port,
+			      param int dst_ip,
+			      param int dst_port) {
+        reference net;
+    }
+}

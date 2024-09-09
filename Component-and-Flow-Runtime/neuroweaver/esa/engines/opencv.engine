@@ -1,0 +1,104 @@
+import ohai.sw_interfaces as inouts
+import numpy as np
+
+
+engine opencv implements computer_vision {
+
+    interface input_mem = inouts.fifo
+    interface output_mem = inouts.fifo
+    interface weight_mem = inouts.fifo
+    interface scratch_mem = inouts.*
+    interface cfg = inouts.config
+
+    capability grayscale(input_mem ndarray img,
+			             output_mem ndarray img_out)
+    {
+        language: Python,
+        file: "/Users/joon/ohai.src/esa/engines/impl/opencv/grayscale.py"
+    }
+
+    capability gaussian_blur(input_mem ndarray img_in,
+    	       	 	         input_mem int[] kernel_size,
+			                 input_mem int sigma_x,
+			                 output_mem ndarray img_out)
+    {
+        language: Python,
+	    file: "/Users/joon/ohai.src/esa/engines/impl/opencv/gaussian_blur.py"
+    }
+
+    capability threshold(input_mem ndarray img,
+			             input_mem int thresh,
+			             input_mem int maxval,
+			             input_mem int type,
+			             output_mem ndarray dst)
+    {
+        language: Python,
+	    file: "/Users/joon/ohai.src/esa/engines/impl/opencv/threshold.py"
+    }
+
+    capability bitwise_not(input_mem ndarray img,
+			               output_mem ndarray dst)
+    {
+        language: Python,
+	    file: "/Users/joon/ohai.src/esa/engines/impl/opencv/bitwise_not.py"
+    }
+
+    capability find_contours(input_mem ndarray img_in,
+			                 input_mem int mode,
+			                 input_mem int method,
+			                 output_mem ndarray contours)
+    {
+        language: Python,
+	    file: "/Users/joon/ohai.src/esa/engines/impl/opencv/find_contours.py"
+    }
+
+    capability contour_area(input_mem ndarray contour,
+			                output_mem float area)
+    {
+        language: Python,
+	    file: "/Users/joon/ohai.src/esa/engines/impl/opencv/contour_area.py"
+    }
+
+    capability draw_contours(input_mem ndarray img_in,
+			                 input_mem ndarray contours,
+			                 input_mem int contourIdx,
+			                 input_mem string color,
+			                 output_mem ndarray img_out)
+    {
+        language: Python,
+	    file: "/Users/joon/ohai.src/esa/engines/impl/opencv/draw_contours.py"
+    }
+
+    capability bounding_rect(input_mem ndarray points,
+			                 output_mem ndarray rect)
+    {
+        language: Python,
+	    file: "/Users/joon/ohai.src/esa/engines/impl/opencv/bounding_rect.py"
+    }
+
+    capability imread(input string img_file,
+                      output ndarray img)
+    {
+        language: Python,
+        file: "/Users/joon/ohai.src/esa/engines/impl/opencv/imread.py"
+    }
+
+    capability imwrite(input string img_file,
+                       input ndarray img)
+    {
+        language: Python,
+        file: "/Users/joon/ohai.src/esa/engines/impl/opencv/imwrite.py"
+    }
+
+
+//    fusion {
+//        grayscale: [gaussian_blur, threshold, bitwise_not, find_contours, draw_contours],
+//	gaussian_blur: [grayscale, threshold, bitwise_not, find_contours, draw_contours],
+//	threshold: [grayscale, gaussian_blur, bitwise_not, find_contours, draw_contours],
+//	bitwise_not: [grayscale, gaussian_blur, threshold, find_contours, draw_contours],
+//	find_contours: [contour_area, draw_contours],
+//	contour_area: [find_contours],
+//	draw_contours: [find_contours],
+//	boundingRect: [find_contours]
+//    }
+}

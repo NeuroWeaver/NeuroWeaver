@@ -1,0 +1,29 @@
+// Tensor abstract data type
+
+abstract data Tensor {
+    default reference onnx
+
+    enum data_type {
+        INT8,
+        INT16,
+        INT32,
+        INT64,
+        FLOAT,
+        DOUBLE
+    }
+
+    // data type of the tensor
+    int dtype
+
+    // tensor shape
+    tuple int shape
+
+    array float float_data
+    array int32 int32_data
+    array bytes string_data
+    array int64 int64_data
+    array double double_data
+
+    // name for the tensor
+    string name
+}

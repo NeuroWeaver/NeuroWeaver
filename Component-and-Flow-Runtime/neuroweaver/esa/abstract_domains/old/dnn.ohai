@@ -1,0 +1,54 @@
+// abstract domain definition for DNN
+abstract dnn {
+
+    capabilities: {
+        conv(In Fifo fxp16[][][][],
+	     Out Fifo fxp16[][][][],
+	     State Random *[][][][],  // '*' means any data type
+	     Conf config)
+	{
+	    config = {
+	        dilation = 1,
+	        stride = 1,
+	        padding = 'valid'
+	    },
+            path = '/dnn.py';  // filepath where conv() is defined
+	},
+	pool(In Fifo fxp16[][][][],
+	     Out Fifo fxp16[][][][],
+	     Conf config)
+	{
+	    config = {
+	        stride = 1,
+	        padding = 'same'
+	    }
+	},
+	flatten(In fxp16[][][][],
+	        Out fxp16[][])
+	{
+	    path = '/dnn.py';
+	},
+	fc(In Fifo fxp16[][]
+	   Out Fifo fxp16[][],
+	   State Random *[][])
+	{
+	    path = '/dnn.py';
+	}
+    }
+}
+
+
+// flowtype (interface) definitions. Instantiated by applicaiton programs.
+// push() and pop() functions need to be a built-in support by ohai.
+// all flowtypes will have push() and pop() supported by ohai.
+flowtype Fifo {
+    kind = fifo;
+    direction = uni;
+    size = unlimited;
+}
+
+flowtype Random {
+    kind = random;  // random access
+    direction = bi;
+    size = unlimited;
+}

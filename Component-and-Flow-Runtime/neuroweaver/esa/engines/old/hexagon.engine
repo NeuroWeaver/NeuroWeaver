@@ -1,0 +1,15 @@
+import ohai.hw_interfaces as inouts;
+
+
+engine hexagon implements dsp {
+
+    default reference {
+
+    }
+
+    interface input_mem = inouts.fifo
+
+    capability fft() {
+
+    }
+}

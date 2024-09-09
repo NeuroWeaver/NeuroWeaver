@@ -1,0 +1,79 @@
+# Engine Set Architecture
+
+This directory contains abstract domain definitions and engine specifications, written in the OHAI Engine Specification Language (ESL).
+
+# Prereq:
+
+$ source antlrrc.sh
+
+$ protoc --proto_path=/Users/joon/ohai.src/qfdfg:. --python_out=. esa.proto
+
+# To run the parser generator:
+
+$ run_antlr
+
+This generates both Python and Java parser targets in grammar/ directory.
+Java parser target is needed for parse tree visualization.
+
+# To run the parser generator for abstract domain grammar (Skip if you already ran run_antlr):
+
+$ target_abstract_domain
+
+# To run the parser generator for engine spec grammar (Skip if you already ran run_antlr):
+
+$ target_engine_spec_lang
+
+# To visualize the parse tree:
+
+$ show_ast [domain | engine] [.domain file | .engine file (optional)]
+
+If .domain file or .engine file is not provided, by default test.domain and test.engine will be used.
+
+# To clean ESL parser runtime:
+
+$ ./clean.sh esl
+
+# To clean all generated parsers:
+
+$ ./clean.sh grammar
+
+# To run the abstract domain parser:
+
+$ python abstract_domain_parser.py file.domain [-o abstract_domain.pb]
+
+This generates abstract_domain.pb file. Example:
+python abstract_domain_parser.py abstract_domains/deep_learning.domain -o deep_learning.pb
+
+# To run the engine specification language parser:
+
+$ python engine_spec_parser.py file.engine [-o engine_spec.pb]
+
+This generates engine_spec.pb file. Example:
+python engine_spec_parser.py engines/tensorflow.engine -o tf_engine.pb
+
+# To add engine specifications to corresponding domain:
+
+$ python add_engine_pass.py engine.pb [-d domain_file.pb] [-o abstract_domain_with_engine.pb]
+
+This generates abstract_domain_with_engine.pb. Example:
+python add_engine_pass.py tf_engine.pb -d deep_learning.pb -o deep_learning.pb
+
+# To add a new domain to engine system:
+
+$ python add_domain_pass.py domain.pb [, domain2.pb, ...] [-o engine_system.pb]
+
+This generates engine_system.pb file. Example:
+python add_domain_pass.py deep_learning.pb -o engine_system.pb
+
+
+# To print out domain pb files:
+
+$ python abstract_domain_printer.py domain.pb
+
+# To print out engine pb files:
+
+$ python engine_printer.py engine.pb
+
+# To print out engine system pb file:
+
+$ python engine_sys_printer.py engine_sys.pb

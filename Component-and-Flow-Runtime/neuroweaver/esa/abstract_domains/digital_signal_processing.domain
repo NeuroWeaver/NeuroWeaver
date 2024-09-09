@@ -1,0 +1,23 @@
+import esa.abstract_data.array as array
+import esa.abstract_data.tensor as tensor
+
+
+abstract domain digital_signal_processing {
+    default reference fftw
+
+    capability fft(input array in_array,
+                   output array out_array,
+                   param int length,
+                   param int axis,
+                   param string norm)
+
+    capability band_pass_filter(input tensor in_array,
+                                output tensor out_array,
+                                param tensor frequency_bands)
+
+    capability convolution(input tensor in_array,
+                           output tensor out_array,
+                           state tensor weight,
+                           param string mode,
+                           param string boundary)
+}

@@ -1,0 +1,58 @@
+import ohai.hw_interfaces as inouts
+
+
+engine dnnweaver implements deep_learning {
+
+    interface input_mem = inouts.fifo
+    interface output_mem = inouts.fifo
+    interface weight_mem = inouts.fifo
+    interface scratch_mem = inouts.*
+    interface cfg = inouts.config
+
+    capability conv2d(input_mem fxp16[][][][] t_in,
+                      weight_mem fpx16[][][][] weights,
+		      weight_mem fpx16[][][][] biases,
+                      cfg int[] strides,
+                      cfg char[] padding,
+               	      output_mem fxp16[][][][] t_out)
+    touches scratch_mem
+    {
+        language: Python,
+	file: "./esa/engines/impl/dnnweaver/dnnweaver_engine.py",
+	runtime_cost: 5
+    }
+
+    capability max_pool(input_mem fxp16[][][][] t_in,
+                    cfg int[] strides,
+                    cfg char[] padding,
+	            output_mem fxp16[][][][] t_out)
+    {
+        language: Python,
+	file: "./esa/engines/impl/dnnweaver/dnnweaver_engine.py",
+	runtime_cost: 15
+    }
+
+    capability flatten(input_mem fxp16[][][][] t_in,
+		       output_mem fxp16[][] t_out)
+    {
+        language: Python,
+	file: "./esa/engines/impl/dnnweaver/dnnweaver_engine.py",
+	runtime_cost: 5
+    }
+
+    capability fully_connected(input_mem fxp16[][] t_in,
+		               output_mem fxp16[][] t_out)
+    touches scratch_mem
+    {
+        language: Python,
+	file: "./esa/engines/impl/dnnweaver/dnnweaver_engine.py",
+	runtime_cost: 5
+    }
+
+    //fusion {
+    //    conv2d          : [pool],
+    //    pool            : [flatten],
+    //    flatten         : [fully_connected],
+    //    fully_connected : [conv2d]
+    //}
+}

@@ -1,0 +1,18 @@
+import esa.computer_vision
+
+
+engine cuda implements esa.computer_vision {
+
+    default reference cuda = {
+
+    }
+
+    capability grayscale() {
+        compiler: nvcc,
+
+    }
+
+    capability blur() {
+
+    }
+}

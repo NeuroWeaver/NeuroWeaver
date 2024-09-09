@@ -1,0 +1,75 @@
+abstract domain data_analytics {
+
+    default reference blas = {
+        language = "C";
+        file = "blas.c";
+    }
+
+    reference caffe = {
+        language = "C++";
+        file = "caffe.cpp";
+    }
+
+    // element-wise operations
+    // add elements of v_in2 to elements of v_in1
+    capability vector_add_vector(v_in1, v_in2, v_out) {
+        reference blas;    // use the default blas reference implementation
+    }
+
+    // subtract elements of v_in2 from elements of v_in1
+    capability vector_subtract_vector(v_in1, v_in2, v_out) {
+        reference blas;
+    }
+
+    // divide elements of v_in1 by elements of v_in2
+    capability vector_divide_vector(v_in1, v_in2, v_out) {
+        reference blas;
+    }
+
+    // multiply elements of v_in1 by elements of v_in2
+    capability vector_mult_vector(v_in1, v_in2, v_out) {
+        reference blas;
+    }
+
+    // TODO: use this instead of vector_add_vector() and mat_add_mat()
+    // enfoce typechcekcing/dimentaionslity check
+    // '+' replaced by this - may not work
+    capability add(in1, in2, result) {
+
+    }
+
+    // add elements of b to elements of a
+    capability matrix_add_matrix(m_in1, m_in2, m_out) {
+        reference blas;
+    }
+
+    // subtract elements of b from elements of a
+    capability matrix_subtract_matrix(m_in1, m_in2, m_out) {
+        reference blas;
+    }
+
+    // divide elements of a by elements of b
+    capability matrix_divide_matrix(m_in1, m_in2, m_out) {
+        reference blas;
+    }
+
+    capability sigmoid(a, b) {
+        reference caffe;    // use the caffe reference implementation
+    }
+
+    // non-element-wise operations
+    // vector-vector dot product
+    capability vector_dot_prod(v_in1, v_in2, v_out) {
+        reference blas;
+    }
+
+    // matrix-vector multiplication
+    capability matrix_multiply_vector(m_in1, m_in2, m_out) {
+        reference blas;
+    }
+
+    // matrix-matrix multiplication
+    capability matrix_multiply_matrix(m_in1, m_in2, m_out) {
+        reference blas;
+    }
+}
