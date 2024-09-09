@@ -1,0 +1,17 @@
+./.DS_Store:  binary file
+./RTL/.DS_Store:  binary file
+./RTL/source/.DS_Store:  binary file
+./RTL/source/genesys_asic_synthesis_src/.DS_Store:  binary file
+./RTL/source/genesys_asic_synthesis_src/systolic_src/control_m_axi_write_master_counter.sv:  duplicate of ./RTL/source/memory_interface/control_m_axi_write_master_counter.sv
+./RTL/source/genesys_asic_synthesis_src/systolic_src/ddr_memory_interface_control_m_axi_fifo.sv:  duplicate of ./RTL/source/memory_interface/ddr_memory_interface_control_m_axi_fifo.sv
+./RTL/source/genesys_asic_synthesis_src/systolic_src/fifo.v:  duplicate of ./RTL/source/genesys_src/fifo.v
+./RTL/source/genesys_asic_synthesis_src/systolic_src/systolic_fpga_control_s_axi.v:  duplicate of ./RTL/source/memory_interface/systolic_fpga_control_s_axi.v
+./RTL/source/include/config_ignore.vh:  language unknown (#3)
+./RTL/source/memory_interface/control_m_axi_write_master_fifo.sv.bk:  language unknown (#3)
+./RTL/source/simd_src/iterator_address_gen.v:  duplicate of ./RTL/source/simd_src/iterator_address_gen_depreciated.v
+./RTL/vivado_pid1465433.zip:  binary file
+./testbench/.DS_Store:  binary file
+./testbench/generic_tb_files/config.vh:  language unknown (#3)
+./testbench/generic_tb_files/systolic_fpga_benchmark_config.vh:  language unknown (#3)
+./testbench/scripts/.DS_Store:  binary file
+./testbench/systolic_fpga_resnet18_4_tiles.tb:  language unknown (#3)
