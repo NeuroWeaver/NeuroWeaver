@@ -1,0 +1,35 @@
+Class
+
+- Decoder
+- Control Logic
+    - Add cycles for 
+        Instruction Decode
+        Intermediate registers and FIFOs
+- Buffer Base Class with double buffer
+    - IBUF
+    - OBUF
+    - WBUF
+    - BBUF
+    - load
+        - use a tag and compute Stats
+    - compute
+        - use a tag and update number of read and writes
+    - store 
+        - use a tag and compute Stats
+    - Have dependency check and error if tags are filled
+
+- Compute
+    - Takes in the loop information and outputs the cycles needed and mem accesses requires.
+    - Mem accesses gets updated into the buffers?
+
+- Pipeline
+    Working:
+        - Calls execute function inside every class.
+        - Execute updates the variables like cycles, accesses, tag etc.
+            - cycles are for that load itself? There can be 2 different variables for cycles, one for that tile and other accumulating
+        
+- Stats
+
+
+Latency from: https://www.fccm.org/past/2020/proceedings/2020/pdfs/FCCM2020-65FOvhMqzyMYm99lfeVKyl/580300a111/580300a111.pdf
+

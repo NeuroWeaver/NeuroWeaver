@@ -1,0 +1,35 @@
+// CODELET:	max_pool3
+inputs=data['N', 'IH', 'IW', 'C']
+intermediates=min_val['SIMD_SIZE']
+outputs=out['N', 'OH', 'OW', 'C']
+0	config0: start-SIMD
+1	config1: start-IMM
+2	(N)loop0[0]: START=0; STOP=1; STRIDE=1; OFFSET:0
+3		(C)loop1[1]: START=0; STOP=64; STRIDE=16; OFFSET:0
+4			(KH)loop2[2]: START=0; STOP=3; STRIDE=3; OFFSET:0
+5				(KW)loop3[3]: START=0; STOP=3; STRIDE=3; OFFSET:0
+6					(OH)loop4[4]: START=0; STOP=56; STRIDE=28; OFFSET:0
+7						(OW)loop5[5]: START=0; STOP=56; STRIDE=8; OFFSET:0
+8							transfer1: OPERAND: out[DRAM->VMEM2], SIZES: [[1, 56, 56, 64], [1, 28, 8, 16]]
+9							transfer0: OPERAND: data[DRAM->VMEM1], SIZES: [[1, 114, 114, 64], [1, 57, 17, 16]]
+10							(N)loop6[6]: START=0; STOP=1; STRIDE=1; OFFSET:0
+11								(C)loop7[7]: START=0; STOP=16; STRIDE=1; OFFSET:0
+12									(KH)loop8[8]: START=0; STOP=3; STRIDE=1; OFFSET:0
+13										(KW)loop9[9]: START=0; STOP=3; STRIDE=1; OFFSET:0
+14											(OH)loop10[10]: START=0; STOP=28; STRIDE=1; OFFSET:0
+15												(OW)loop11[11]: START=0; STOP=8; STRIDE=1; OFFSET:0
+16													compute0: SIMD-MAX(['data', 'out'])->['out']
+17												loop11: END
+18											loop10: END
+19										loop9: END
+20									loop8: END
+21								loop7: END
+22							loop6: END
+23							transfer2: OPERAND: out[VMEM2->DRAM], SIZES: [[1, 28, 8, 16], [1, 56, 56, 64]]
+24						loop5: END
+25					loop4: END
+26				loop3: END
+27			loop2: END
+28		loop1: END
+29	loop0: END
+30	config2: end-SIMD

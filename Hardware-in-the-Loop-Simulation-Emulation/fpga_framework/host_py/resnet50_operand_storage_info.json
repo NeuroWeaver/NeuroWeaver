@@ -1,0 +1,67 @@
+{
+  "layer0_conv_bias_relu1": {
+    "inputs": {
+      "input": {
+        "path": "/Users/cpriebe/Projects/Research/codelets.src/tools/compilation_output/resnet50_benchmark16x16_endtoend/layer0_conv_bias_relu1/data/input/input_shuffled.txt",
+        "dtype": "FXP8",
+        "layer": "conv_bias_relu1",
+        "offset": 29597696,
+        "shape": {
+          "N": 1,
+          "IH": 230,
+          "IW": 230,
+          "IC": 64
+        },
+        "size_in_bytes": 3385600,
+        "buffer": "IBUF"
+      },
+      "conv_0_497B": {
+        "path": "/Users/cpriebe/Projects/Research/codelets.src/tools/compilation_output/resnet50_benchmark16x16_endtoend/layer0_conv_bias_relu1/data/conv_0_497B/conv_0_497B_shuffled.txt",
+        "dtype": "FXP8",
+        "layer": "conv_bias_relu1",
+        "offset": 229376,
+        "shape": {
+          "KH": 7,
+          "KW": 7,
+          "IC": 64,
+          "OC": 64
+        },
+        "size_in_bytes": 200704,
+        "buffer": "WBUF"
+      },
+      "conv_0_498D": {
+        "path": "/Users/cpriebe/Projects/Research/codelets.src/tools/compilation_output/resnet50_benchmark16x16_endtoend/layer0_conv_bias_relu1/data/conv_0_498D.txt",
+        "dtype": "FXP32",
+        "layer": "conv_bias_relu1",
+        "offset": 430080,
+        "shape": {
+          "OC": 64
+        },
+        "size_in_bytes": 256,
+        "buffer": "BBUF"
+      }
+    },
+    "outputs": {
+      "relu_1_323Y": {
+        "path": "/Users/cpriebe/Projects/Research/codelets.src/tools/compilation_output/resnet50_benchmark16x16_endtoend/layer0_conv_bias_relu1/data/relu_1_323Y.txt",
+        "dtype": "FXP32",
+        "layer": "conv_bias_relu1",
+        "offset": 26210304,
+        "shape": {
+          "N": 1,
+          "OH": 112,
+          "OW": 112,
+          "OC": 64
+        },
+        "size_in_bytes": 3211264,
+        "buffer": "VMEM2"
+      }
+    },
+    "instructions": {
+      "path": "/Users/cpriebe/Projects/Research/codelets.src/tools/compilation_output/resnet50_benchmark16x16_endtoend/layer0_conv_bias_relu1/conv_bias_relu1_string_final.txt",
+      "bitwidth": 32,
+      "size_in_bytes": 1564,
+      "offset": 0
+    }
+  }  
+}

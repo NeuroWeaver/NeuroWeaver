@@ -1,0 +1,141 @@
+XRT build version: 2.6.655
+Build hash: 2d6bfe4ce91051d4e5b499d38fc493586dd4859a
+Build date: 2020-05-22 12:05:03
+Git branch: 2020.1
+PID: 8672
+UID: 1001
+[Tue Oct 12 09:56:59 2021]
+HOST: ojas
+EXE: /home/rohan/genesys-merged-repo/fpga_framework/bin/resnet50_1_conv_case101
+[XRT] WARNING: The data_transfer_trace setting of coarse is not supported in emulation. Fine will be used.
+INFO: Found Xilinx Platform
+INFO: Loading 'systolic_fpga.hw_emu.xclbin'
+INFO: Loading 'systolic_fpga.hw_emu.xclbin'
+INFO: [HW-EM 01] Hardware emulation runs simulation underneath. Using a large data set will result in long simulation times. It is recommended that a small dataset is used for faster execution. The flow uses approximate models for DDR memory and interconnect and hence the performance data generated is approximate.
+INFO: Reading File '/home/rohan/genesys-merged-repo/testcases/resnet50_1_conv_case101/resnet50_1_conv_decimal.txt'
+INFO: Reading File '/home/rohan/genesys-merged-repo/testcases/resnet50_1_conv_case101/bias.txt'
+INFO: Reading File '/home/rohan/genesys-merged-repo/testcases/resnet50_1_conv_case101/weights_shuffled.txt'
+INFO: Reading File '/home/rohan/genesys-merged-repo/testcases/resnet50_1_conv_case101/input_shuffled.txt'
+Exiting Initialize Array Function
+Initialize registers
+Transfer Data to DDR
+Execute Program
+Copy data from DDR
+Execution Time: -1.40292e+08
+INFO::[ Vitis-EM 22 ] [Time elapsed: 5 minute(s) 51 seconds, Emulation time: 0.0205524 ms]
+Data transfer between kernel(s) and global memory(s)
+systolic_fpga_1:m00_imem_axi-DDR[0:1]          RD = 0.875 KB               WR = 0.000 KB        
+systolic_fpga_1:m01_parambuf_axi-DDR[0:1]          RD = 184.000 KB             WR = 0.000 KB        
+systolic_fpga_1:m02_ibuf_axi-DDR[0:1]          RD = 27.625 KB              WR = 0.000 KB        
+systolic_fpga_1:m03_obuf_axi-DDR[0:1]          RD = 0.000 KB               WR = 0.000 KB        
+
+INFO::[ Vitis-EM 22 ] [Time elapsed: 10 minute(s) 20 seconds, Emulation time: 0.0299377 ms]
+Data transfer between kernel(s) and global memory(s)
+systolic_fpga_1:m00_imem_axi-DDR[0:1]          RD = 0.875 KB               WR = 0.000 KB        
+systolic_fpga_1:m01_parambuf_axi-DDR[0:1]          RD = 196.250 KB             WR = 0.000 KB        
+systolic_fpga_1:m02_ibuf_axi-DDR[0:1]          RD = 99.125 KB              WR = 0.000 KB        
+systolic_fpga_1:m03_obuf_axi-DDR[0:1]          RD = 0.000 KB               WR = 0.000 KB        
+
+INFO::[ Vitis-EM 22 ] [Time elapsed: 17 minute(s) 2 seconds, Emulation time: 0.0424635 ms]
+Data transfer between kernel(s) and global memory(s)
+systolic_fpga_1:m00_imem_axi-DDR[0:1]          RD = 0.875 KB               WR = 0.000 KB        
+systolic_fpga_1:m01_parambuf_axi-DDR[0:1]          RD = 196.250 KB             WR = 0.000 KB        
+systolic_fpga_1:m02_ibuf_axi-DDR[0:1]          RD = 99.125 KB              WR = 0.000 KB        
+systolic_fpga_1:m03_obuf_axi-DDR[0:1]          RD = 0.000 KB               WR = 0.000 KB        
+
+INFO::[ Vitis-EM 22 ] [Time elapsed: 20 minute(s) 20 seconds, Emulation time: 0.0487147 ms]
+Data transfer between kernel(s) and global memory(s)
+systolic_fpga_1:m00_imem_axi-DDR[0:1]          RD = 0.875 KB               WR = 0.000 KB        
+systolic_fpga_1:m01_parambuf_axi-DDR[0:1]          RD = 196.250 KB             WR = 0.000 KB        
+systolic_fpga_1:m02_ibuf_axi-DDR[0:1]          RD = 148.688 KB             WR = 0.000 KB        
+systolic_fpga_1:m03_obuf_axi-DDR[0:1]          RD = 0.000 KB               WR = 28.000 KB       
+
+INFO::[ Vitis-EM 22 ] [Time elapsed: 28 minute(s) 44 seconds, Emulation time: 0.0643712 ms]
+Data transfer between kernel(s) and global memory(s)
+systolic_fpga_1:m00_imem_axi-DDR[0:1]          RD = 0.875 KB               WR = 0.000 KB        
+systolic_fpga_1:m01_parambuf_axi-DDR[0:1]          RD = 196.250 KB             WR = 0.000 KB        
+systolic_fpga_1:m02_ibuf_axi-DDR[0:1]          RD = 162.500 KB             WR = 0.000 KB        
+systolic_fpga_1:m03_obuf_axi-DDR[0:1]          RD = 0.000 KB               WR = 56.000 KB       
+
+INFO::[ Vitis-EM 22 ] [Time elapsed: 31 minute(s) 0 seconds, Emulation time: 0.0685354 ms]
+Data transfer between kernel(s) and global memory(s)
+systolic_fpga_1:m00_imem_axi-DDR[0:1]          RD = 0.875 KB               WR = 0.000 KB        
+systolic_fpga_1:m01_parambuf_axi-DDR[0:1]          RD = 196.250 KB             WR = 0.000 KB        
+systolic_fpga_1:m02_ibuf_axi-DDR[0:1]          RD = 198.250 KB             WR = 0.000 KB        
+systolic_fpga_1:m03_obuf_axi-DDR[0:1]          RD = 0.000 KB               WR = 56.000 KB       
+
+INFO::[ Vitis-EM 22 ] [Time elapsed: 36 minute(s) 45 seconds, Emulation time: 0.0789841 ms]
+Data transfer between kernel(s) and global memory(s)
+systolic_fpga_1:m00_imem_axi-DDR[0:1]          RD = 0.875 KB               WR = 0.000 KB        
+systolic_fpga_1:m01_parambuf_axi-DDR[0:1]          RD = 196.250 KB             WR = 0.000 KB        
+systolic_fpga_1:m02_ibuf_axi-DDR[0:1]          RD = 198.250 KB             WR = 0.000 KB        
+systolic_fpga_1:m03_obuf_axi-DDR[0:1]          RD = 0.000 KB               WR = 56.000 KB       
+
+INFO::[ Vitis-EM 22 ] [Time elapsed: 44 minute(s) 34 seconds, Emulation time: 0.0935937 ms]
+Data transfer between kernel(s) and global memory(s)
+systolic_fpga_1:m00_imem_axi-DDR[0:1]          RD = 0.875 KB               WR = 0.000 KB        
+systolic_fpga_1:m01_parambuf_axi-DDR[0:1]          RD = 196.250 KB             WR = 0.000 KB        
+systolic_fpga_1:m02_ibuf_axi-DDR[0:1]          RD = 247.812 KB             WR = 0.000 KB        
+systolic_fpga_1:m03_obuf_axi-DDR[0:1]          RD = 0.000 KB               WR = 84.000 KB       
+
+INFO::[ Vitis-EM 22 ] [Time elapsed: 47 minute(s) 49 seconds, Emulation time: 0.099845 ms]
+Data transfer between kernel(s) and global memory(s)
+systolic_fpga_1:m00_imem_axi-DDR[0:1]          RD = 0.875 KB               WR = 0.000 KB        
+systolic_fpga_1:m01_parambuf_axi-DDR[0:1]          RD = 196.250 KB             WR = 0.000 KB        
+systolic_fpga_1:m02_ibuf_axi-DDR[0:1]          RD = 247.812 KB             WR = 0.000 KB        
+systolic_fpga_1:m03_obuf_axi-DDR[0:1]          RD = 0.000 KB               WR = 96.000 KB       
+
+INFO::[ Vitis-EM 22 ] [Time elapsed: 50 minute(s) 41 seconds, Emulation time: 0.105063 ms]
+Data transfer between kernel(s) and global memory(s)
+systolic_fpga_1:m00_imem_axi-DDR[0:1]          RD = 0.875 KB               WR = 0.000 KB        
+systolic_fpga_1:m01_parambuf_axi-DDR[0:1]          RD = 196.250 KB             WR = 0.000 KB        
+systolic_fpga_1:m02_ibuf_axi-DDR[0:1]          RD = 297.375 KB             WR = 0.000 KB        
+systolic_fpga_1:m03_obuf_axi-DDR[0:1]          RD = 0.000 KB               WR = 112.000 KB      
+
+INFO::[ Vitis-EM 22 ] [Time elapsed: 56 minute(s) 23 seconds, Emulation time: 0.115498 ms]
+Data transfer between kernel(s) and global memory(s)
+systolic_fpga_1:m00_imem_axi-DDR[0:1]          RD = 0.875 KB               WR = 0.000 KB        
+systolic_fpga_1:m01_parambuf_axi-DDR[0:1]          RD = 196.250 KB             WR = 0.000 KB        
+systolic_fpga_1:m02_ibuf_axi-DDR[0:1]          RD = 297.375 KB             WR = 0.000 KB        
+systolic_fpga_1:m03_obuf_axi-DDR[0:1]          RD = 0.000 KB               WR = 112.000 KB      
+
+INFO::[ Vitis-EM 22 ] [Time elapsed: 63 minute(s) 4 seconds, Emulation time: 0.128014 ms]
+Data transfer between kernel(s) and global memory(s)
+systolic_fpga_1:m00_imem_axi-DDR[0:1]          RD = 0.875 KB               WR = 0.000 KB        
+systolic_fpga_1:m01_parambuf_axi-DDR[0:1]          RD = 196.250 KB             WR = 0.000 KB        
+systolic_fpga_1:m02_ibuf_axi-DDR[0:1]          RD = 346.938 KB             WR = 0.000 KB        
+systolic_fpga_1:m03_obuf_axi-DDR[0:1]          RD = 0.000 KB               WR = 140.000 KB      
+
+INFO::[ Vitis-EM 22 ] [Time elapsed: 66 minute(s) 30 seconds, Emulation time: 0.134275 ms]
+Data transfer between kernel(s) and global memory(s)
+systolic_fpga_1:m00_imem_axi-DDR[0:1]          RD = 0.875 KB               WR = 0.000 KB        
+systolic_fpga_1:m01_parambuf_axi-DDR[0:1]          RD = 196.250 KB             WR = 0.000 KB        
+systolic_fpga_1:m02_ibuf_axi-DDR[0:1]          RD = 346.938 KB             WR = 0.000 KB        
+systolic_fpga_1:m03_obuf_axi-DDR[0:1]          RD = 0.000 KB               WR = 140.000 KB      
+
+INFO::[ Vitis-EM 22 ] [Time elapsed: 75 minute(s) 59 seconds, Emulation time: 0.152012 ms]
+Data transfer between kernel(s) and global memory(s)
+systolic_fpga_1:m00_imem_axi-DDR[0:1]          RD = 0.875 KB               WR = 0.000 KB        
+systolic_fpga_1:m01_parambuf_axi-DDR[0:1]          RD = 196.250 KB             WR = 0.000 KB        
+systolic_fpga_1:m02_ibuf_axi-DDR[0:1]          RD = 346.938 KB             WR = 0.000 KB        
+systolic_fpga_1:m03_obuf_axi-DDR[0:1]          RD = 0.000 KB               WR = 168.000 KB      
+
+INFO::[ Vitis-EM 22 ] [Time elapsed: 77 minute(s) 38 seconds, Emulation time: 0.15618 ms]
+Data transfer between kernel(s) and global memory(s)
+systolic_fpga_1:m00_imem_axi-DDR[0:1]          RD = 0.875 KB               WR = 0.000 KB        
+systolic_fpga_1:m01_parambuf_axi-DDR[0:1]          RD = 196.250 KB             WR = 0.000 KB        
+systolic_fpga_1:m02_ibuf_axi-DDR[0:1]          RD = 346.938 KB             WR = 0.000 KB        
+systolic_fpga_1:m03_obuf_axi-DDR[0:1]          RD = 0.000 KB               WR = 182.000 KB      
+
+Output Comparision
+INFO: Reading File '/home/rohan/genesys-merged-repo/testcases/resnet50_1_conv_case101/output.txt'
+TEST PASSED
+INFO::[ Vitis-EM 22 ] [Time elapsed: 77 minute(s) 51 seconds, Emulation time: 0.158337 ms]
+Data transfer between kernel(s) and global memory(s)
+systolic_fpga_1:m00_imem_axi-DDR[0:1]          RD = 0.875 KB               WR = 0.000 KB        
+systolic_fpga_1:m01_parambuf_axi-DDR[0:1]          RD = 196.250 KB             WR = 0.000 KB        
+systolic_fpga_1:m02_ibuf_axi-DDR[0:1]          RD = 346.938 KB             WR = 0.000 KB        
+systolic_fpga_1:m03_obuf_axi-DDR[0:1]          RD = 0.000 KB               WR = 196.000 KB      
+
+INFO: [HW-EM 06-0] Waiting for the simulator process to exit
+INFO: [HW-EM 06-1] All the simulator processes exited successfully

@@ -1,0 +1,31 @@
+XRT build version: 2.6.655
+Build hash: 2d6bfe4ce91051d4e5b499d38fc493586dd4859a
+Build date: 2020-05-22 12:05:03
+Git branch: 2020.1
+PID: 19326
+UID: 1001
+[Wed Oct  6 19:47:20 2021]
+HOST: ojas
+EXE: /home/rohan/genesys-merged-repo/fpga_framework/resnet50_1_conv_case3
+[XRT] WARNING: The data_transfer_trace setting of coarse is not supported in emulation. Fine will be used.
+INFO: Found Xilinx Platform
+INFO: Loading 'systolic_fpga.hw_emu.xclbin'
+INFO: Loading 'systolic_fpga.hw_emu.xclbin'
+INFO: [HW-EM 01] Hardware emulation runs simulation underneath. Using a large data set will result in long simulation times. It is recommended that a small dataset is used for faster execution. The flow uses approximate models for DDR memory and interconnect and hence the performance data generated is approximate.
+INFO: Reading File '/home/rohan/genesys-merged-repo/testcases/resnet50_1_conv_case3/resnet50_1_conv_decimal.txt'
+INFO: Reading File '/home/rohan/genesys-merged-repo/testcases/resnet50_1_conv_case3/bias.txt'
+INFO: Reading File '/home/rohan/genesys-merged-repo/testcases/resnet50_1_conv_case3/weights_shuffled.txt'
+INFO: Reading File '/home/rohan/genesys-merged-repo/testcases/resnet50_1_conv_case3/input_shuffled.txt'
+Exiting Initialize Array Function
+Initialize registers
+Transfer Data to DDR
+Execute Program
+Copy data from DDR
+Execution Time: -1.39741e+08
+INFO::[ Vitis-EM 22 ] [Time elapsed: 4 minute(s) 32 seconds, Emulation time: 0.0185154 ms]
+Data transfer between kernel(s) and global memory(s)
+systolic_fpga_1:m00_imem_axi-DDR[0:1]          RD = 0.875 KB               WR = 0.000 KB        
+systolic_fpga_1:m01_parambuf_axi-DDR[0:1]          RD = 17.000 KB              WR = 0.000 KB        
+systolic_fpga_1:m02_ibuf_axi-DDR[0:1]          RD = 28.000 KB              WR = 0.000 KB        
+systolic_fpga_1:m03_obuf_axi-DDR[0:1]          RD = 0.000 KB               WR = 48.000 KB       
+

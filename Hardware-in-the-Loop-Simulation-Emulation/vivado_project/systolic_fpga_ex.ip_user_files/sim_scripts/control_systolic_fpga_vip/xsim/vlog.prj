@@ -1,0 +1,7 @@
+sv xil_defaultlib --include "/tools/Xilinx/Vivado/2020.2/data/xilinx_vip/include" --include "../../../ipstatic/hdl" \
+"../../../../systolic_fpga_ex.gen/sources_1/ip/control_systolic_fpga_vip/sim/control_systolic_fpga_vip_pkg.sv" \
+"../../../../systolic_fpga_ex.gen/sources_1/ip/control_systolic_fpga_vip/sim/control_systolic_fpga_vip.sv" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

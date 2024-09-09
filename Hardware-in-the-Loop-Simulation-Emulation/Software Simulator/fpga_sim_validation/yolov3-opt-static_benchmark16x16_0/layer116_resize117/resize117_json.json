@@ -1,0 +1,62 @@
+{
+  "mode": "inference",
+  "program": [
+    {
+      "operation": "resize",
+      "instance_id": 117,
+      "iterable_dimensions": {},
+      "operation_parameters": {
+        "N": 1,
+        "C": 256,
+        "H1": 13,
+        "W1": 13,
+        "H2": 26,
+        "W2": 26,
+        "DIMS": 4
+      },
+      "inputs": [
+        {
+          "name": "op1",
+          "unique_name": "model_1_leaky_re_lu_59_LeakyRelu:0_Y",
+          "dtype": "FXP32",
+          "shape_symbols": {
+            "N": 1,
+            "C": 256,
+            "H1": 13,
+            "W1": 13
+          },
+          "data_path": [],
+          "tiling": {}
+        },
+        {
+          "name": "scale",
+          "unique_name": "Resize_scales",
+          "dtype": "FXP32",
+          "shape_symbols": {
+            "DIMS": 4
+          },
+          "data_path": [],
+          "tiling": {}
+        }
+      ],
+      "intermediate": [],
+      "outputs": [
+        {
+          "name": "out",
+          "unique_name": "model_1_leaky_re_lu_59_LeakyRelu:0_permuted_upsampled",
+          "dtype": "FXP32",
+          "shape_symbols": {
+            "N": 1,
+            "C": 256,
+            "H2": 26,
+            "W2": 26
+          },
+          "data_path": [],
+          "tiling": {}
+        }
+      ],
+      "operation_sequence": []
+    },
+    "BLOCK_END 1"
+  ]
+}

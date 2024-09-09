@@ -1,0 +1,933 @@
+<ENTRY>
+{
+ "thisFile": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/systolic_fpga.hw_emu.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue May 16 12:36:44 2023",
+ "timestampMillis": "1684265804924",
+ "buildStep": {
+  "cmdId": "653a7101-5b39-4dd9-8263-fbbb274ec47a",
+  "name": "v++",
+  "logFile": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/link.steps.log",
+  "commandLine": "/opt/tools/xilinx/Vitis/2020.2/bin/unwrapped/lnx64.o/v++  --xp param:compiler.optimizeHlsRuntime=1 --xp vivado_param:project.runs.noReportGeneration=1 --xp vivado_param:project.writeIntermediateCheckpoints=0 --xp vivado_prop:run.__ALL_SYNTH__.strategy=Flow_RuntimeOptimized --xp vivado_prop:run.impl_1.strategy=Flow_RuntimeOptimized --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --link --optimize quick --vivado.synth.jobs 1 --vivado.impl.jobs 1 --platform xilinx_u280_xdma_201920_3 -t hw_emu -s -g --config systolic_fpga.cfg --kernel_frequency 0:10 -o systolic_fpga.hw_emu.xclbin systolic_fpga.xo ",
+  "args": [
+   "--link",
+   "--optimize",
+   "quick",
+   "--vivado.synth.jobs",
+   "1",
+   "--vivado.impl.jobs",
+   "1",
+   "--platform",
+   "xilinx_u280_xdma_201920_3",
+   "-t",
+   "hw_emu",
+   "-s",
+   "-g",
+   "--config",
+   "systolic_fpga.cfg",
+   "--kernel_frequency",
+   "0:10",
+   "-o",
+   "systolic_fpga.hw_emu.xclbin",
+   "systolic_fpga.xo"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/systolic_fpga.cfg",
+    "content": "platform=xilinx_u280_xdma_201920_1\nsave-temps=1\ndebug=1\ntemp_dir=build\nmessageDb=build/krnl_vadd.mdb\nreport_dir=build/reports\nlog_dir=build/logs\n\n[vivado]\nprop=run.impl_1.STEPS.PLACE_DESIGN.TCL.PRE=./systolic_fpga.xdc\nprop=run.my_rm_synth_1.{STEPS.SYNTH_DESIGN.ARGS.DIRECTIVE}={AlternateRoutability}\n[connectivity]\nsp=systolic_fpga_1.axi00_imem_ptr0:DDR[0:1]\nsp=systolic_fpga_1.axi01_parambuf_ptr0:DDR[0:1]\nsp=systolic_fpga_1.axi02_ibuf_ptr0:DDR[0:1]\nsp=systolic_fpga_1.axi03_obuf_ptr0:DDR[0:1]\nsp=systolic_fpga_1.axi04_simd_ptr0:DDR[0:1]\n\n[advanced]\nparam=compiler.skipTimingCheckAndFrequencyScaling=1\n\n"
+   }
+  ],
+  "cwd": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 12:36:44 2023",
+ "timestampMillis": "1684265804924",
+ "status": {
+  "cmdId": "653a7101-5b39-4dd9-8263-fbbb274ec47a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Tue May 16 12:36:53 2023",
+ "timestampMillis": "1684265813635",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u280_xdma_201920_3.xpfm",
+  "hardwareDsa": "xilinx_u280_xdma_201920_3.xsa",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u280_xdma_201920_3",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW_EMU",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "systolic_fpga.hw_emu",
+    "file": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/systolic_fpga.hw_emu.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "systolic_fpga",
+     "file": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/systolic_fpga.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [],
+    "psSources": [],
+    "cuNames": [
+     "systolic_fpga_1"
+    ],
+    "type": "RTL",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2020.2. SW Build (by xbuild) on 2020-11-18-05:13:29"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May 16 12:36:53 2023",
+ "timestampMillis": "1684265813865",
+ "buildStep": {
+  "cmdId": "6377dda0-07a1-46ea-9f3e-b27058c8425d",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/systolic_fpga.xo -keep --config /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm --target emu --output_dir /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int --temp_dir /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/systolic_fpga.xo",
+   "-keep",
+   "--config",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm",
+   "--target",
+   "emu",
+   "--output_dir",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int",
+   "--temp_dir",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/syslinkConfig.ini",
+    "content": "sp=systolic_fpga_1.axi00_imem_ptr0:DDR[0:1]\nsp=systolic_fpga_1.axi01_parambuf_ptr0:DDR[0:1]\nsp=systolic_fpga_1.axi02_ibuf_ptr0:DDR[0:1]\nsp=systolic_fpga_1.axi03_obuf_ptr0:DDR[0:1]\nsp=systolic_fpga_1.axi04_simd_ptr0:DDR[0:1]\n\n"
+   }
+  ],
+  "cwd": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 12:36:53 2023",
+ "timestampMillis": "1684265813866",
+ "status": {
+  "cmdId": "6377dda0-07a1-46ea-9f3e-b27058c8425d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 12:37:48 2023",
+ "timestampMillis": "1684265868151",
+ "status": {
+  "cmdId": "6377dda0-07a1-46ea-9f3e-b27058c8425d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May 16 12:37:48 2023",
+ "timestampMillis": "1684265868164",
+ "buildStep": {
+  "cmdId": "2ed732b5-9cfc-4e4e-a486-c939887f71ea",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/sdsl.dat -rtd /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/cf2sw.rtd -nofilter /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/cf2sw_full.rtd -xclbin /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/xclbin_orig.xml -o /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/sdsl.dat",
+   "-rtd",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/cf2sw.rtd",
+   "-nofilter",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/cf2sw_full.rtd",
+   "-xclbin",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 12:37:48 2023",
+ "timestampMillis": "1684265868165",
+ "status": {
+  "cmdId": "2ed732b5-9cfc-4e4e-a486-c939887f71ea",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 12:38:04 2023",
+ "timestampMillis": "1684265884216",
+ "status": {
+  "cmdId": "2ed732b5-9cfc-4e4e-a486-c939887f71ea",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May 16 12:38:04 2023",
+ "timestampMillis": "1684265884244",
+ "buildStep": {
+  "cmdId": "6d6e2fa3-3906-455d-a464-c23a7d14ef0c",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 12:38:04 2023",
+ "timestampMillis": "1684265884244",
+ "status": {
+  "cmdId": "6d6e2fa3-3906-455d-a464-c23a7d14ef0c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 16 12:38:05 2023",
+ "timestampMillis": "1684265885591",
+ "report": {
+  "path": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 12:38:05 2023",
+ "timestampMillis": "1684265885592",
+ "status": {
+  "cmdId": "6d6e2fa3-3906-455d-a464-c23a7d14ef0c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May 16 12:38:05 2023",
+ "timestampMillis": "1684265885604",
+ "buildStep": {
+  "cmdId": "8289d265-a729-44f2-b49b-b0be584716a1",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw_emu -f xilinx_u280_xdma_201920_3 -g --kernel_frequency 0:10 --remote_ip_cache /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/.ipcache -s --output_dir /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int --log_dir /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/logs/link --report_dir /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/reports/link --config /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/vplConfig.ini -k /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link --emulation_mode debug_waveform --no-info --iprepo /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/xo/ip_repo/mycompany_com_kernel_systolic_fpga_1_0 --messageDb /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/run_link/vpl.pb /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw_emu",
+   "-f",
+   "xilinx_u280_xdma_201920_3",
+   "-g",
+   "--kernel_frequency",
+   "0:10",
+   "--remote_ip_cache",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/.ipcache",
+   "-s",
+   "--output_dir",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int",
+   "--log_dir",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/logs/link",
+   "--report_dir",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/reports/link",
+   "--config",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/vplConfig.ini",
+   "-k",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link",
+   "--emulation_mode",
+   "debug_waveform",
+   "--no-info",
+   "--iprepo",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/xo/ip_repo/mycompany_com_kernel_systolic_fpga_1_0",
+   "--messageDb",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/run_link/vpl.pb",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/vplConfig.ini",
+    "content": "[advanced]\nparam=compiler.optimizeHlsRuntime=1\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=compiler.skipTimingCheckAndFrequencyScaling=1\nparam=hw_emu.enableDebugWaveform=1\nparam=hw_emu.enableProfiling=1\nparam=compiler.vppCurrentWorkingDir=/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework\nmisc=BinaryName=systolic_fpga.hw_emu\n\n[connectivity]\nnk=systolic_fpga:1:systolic_fpga_1\n\n[vivado]\nparam=project.runs.noReportGeneration=1\nparam=project.writeIntermediateCheckpoints=0\nprop=run.__ALL_SYNTH__.strategy=Flow_RuntimeOptimized\nprop=run.impl_1.strategy=Flow_RuntimeOptimized\nsynth.jobs=1\nimpl.jobs=1\nprop=run.impl_1.STEPS.PLACE_DESIGN.TCL.PRE=/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/./systolic_fpga.xdc\nprop=run.my_rm_synth_1.{STEPS.SYNTH_DESIGN.ARGS.DIRECTIVE}={AlternateRoutability}\n\n"
+   }
+  ],
+  "cwd": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 12:38:05 2023",
+ "timestampMillis": "1684265885605",
+ "status": {
+  "cmdId": "8289d265-a729-44f2-b49b-b0be584716a1",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue May 16 12:38:12 2023",
+ "timestampMillis": "1684265892067",
+ "buildStep": {
+  "cmdId": "77b10aae-b907-4940-b4e6-c942c2196123",
+  "name": "vpl",
+  "logFile": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/link.steps.log",
+  "commandLine": "/opt/tools/xilinx/Vitis/2020.2/bin/unwrapped/lnx64.o/vpl -t hw_emu -f xilinx_u280_xdma_201920_3 -g --kernel_frequency 0:10 --remote_ip_cache /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/.ipcache -s --output_dir /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int --log_dir /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/logs/link --report_dir /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/reports/link --config /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/vplConfig.ini -k /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link --emulation_mode debug_waveform --no-info --iprepo /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/xo/ip_repo/mycompany_com_kernel_systolic_fpga_1_0 --messageDb /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/run_link/vpl.pb /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 12:38:12 2023",
+ "timestampMillis": "1684265892068",
+ "status": {
+  "cmdId": "77b10aae-b907-4940-b4e6-c942c2196123",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Tue May 16 12:38:22 2023",
+ "timestampMillis": "1684265902516",
+ "vivadoProject": {
+  "openDir": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May 16 12:38:22 2023",
+ "timestampMillis": "1684265902535",
+ "buildStep": {
+  "cmdId": "3e7f3b91-9c18-485f-b07a-3330c29de18a",
+  "name": "vivado",
+  "logFile": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 12:38:22 2023",
+ "timestampMillis": "1684265902536",
+ "status": {
+  "cmdId": "3e7f3b91-9c18-485f-b07a-3330c29de18a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 13:10:02 2023",
+ "timestampMillis": "1684267802175",
+ "status": {
+  "cmdId": "3e7f3b91-9c18-485f-b07a-3330c29de18a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 13:10:02 2023",
+ "timestampMillis": "1684267802554",
+ "status": {
+  "cmdId": "77b10aae-b907-4940-b4e6-c942c2196123",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 13:10:02 2023",
+ "timestampMillis": "1684267802580",
+ "status": {
+  "cmdId": "8289d265-a729-44f2-b49b-b0be584716a1",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May 16 13:10:02 2023",
+ "timestampMillis": "1684267802648",
+ "buildStep": {
+  "cmdId": "cdccad33-298c-48f5-bdd2-3998cc39e9a4",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 13:10:02 2023",
+ "timestampMillis": "1684267802649",
+ "status": {
+  "cmdId": "cdccad33-298c-48f5-bdd2-3998cc39e9a4",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May 16 13:10:02 2023",
+ "timestampMillis": "1684267802687",
+ "buildStep": {
+  "cmdId": "1b2e50d5-58c0-4785-abb6-5648791315ad",
+  "name": "g++",
+  "logFile": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/systolic_fpga.hw_emu.gpp_so.log",
+  "commandLine": "/opt/tools/xilinx/Vivado/2020.2/tps/lnx64/gcc-6.2.0/bin/g++ -Wall -shared -Wl,-whole-archive,-soname,systolic_fpga.hw_emu.so -o systolic_fpga.hw_emu.so -Wl,--no-whole-archive",
+  "args": [
+   "-Wall",
+   "-shared",
+   "-Wl,-whole-archive,-soname,systolic_fpga.hw_emu.so",
+   "-o",
+   "systolic_fpga.hw_emu.so",
+   "-Wl,--no-whole-archive"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 13:10:02 2023",
+ "timestampMillis": "1684267802688",
+ "status": {
+  "cmdId": "1b2e50d5-58c0-4785-abb6-5648791315ad",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 13:10:04 2023",
+ "timestampMillis": "1684267804652",
+ "status": {
+  "cmdId": "1b2e50d5-58c0-4785-abb6-5648791315ad",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 16 13:10:04 2023",
+ "timestampMillis": "1684267804676",
+ "report": {
+  "path": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/systolic_fpga.hw_emu_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May 16 13:10:04 2023",
+ "timestampMillis": "1684267804678",
+ "buildStep": {
+  "cmdId": "c6db0992-1941-4521-bfa8-c1067a98cf0f",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/address_map.xml -sdsl /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/sdsl.dat -xclbin /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/xclbin_orig.xml -rtd /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/systolic_fpga.hw_emu.rtd -o /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/systolic_fpga.hw_emu.xml",
+  "args": [
+   "-a",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/address_map.xml",
+   "-sdsl",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/systolic_fpga.hw_emu.rtd",
+   "-o",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/systolic_fpga.hw_emu.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 13:10:04 2023",
+ "timestampMillis": "1684267804678",
+ "status": {
+  "cmdId": "c6db0992-1941-4521-bfa8-c1067a98cf0f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 13:10:33 2023",
+ "timestampMillis": "1684267833980",
+ "status": {
+  "cmdId": "c6db0992-1941-4521-bfa8-c1067a98cf0f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May 16 13:10:40 2023",
+ "timestampMillis": "1684267840792",
+ "buildStep": {
+  "cmdId": "599217d7-5e3c-4e13-99c6-96a96cf4d227",
+  "name": "xrflink",
+  "logFile": "",
+  "commandLine": "/opt/tools/xilinx/Vitis/2020.2/bin/xrflink -f /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/consolidated.cf --kernel /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/systolic_fpga.hw_emu.xml",
+  "args": [
+   "-f",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/consolidated.cf",
+   "--kernel",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/systolic_fpga.hw_emu.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 13:10:40 2023",
+ "timestampMillis": "1684267840793",
+ "status": {
+  "cmdId": "599217d7-5e3c-4e13-99c6-96a96cf4d227",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 13:10:49 2023",
+ "timestampMillis": "1684267849918",
+ "status": {
+  "cmdId": "599217d7-5e3c-4e13-99c6-96a96cf4d227",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May 16 13:10:49 2023",
+ "timestampMillis": "1684267849940",
+ "buildStep": {
+  "cmdId": "071059de-d90d-434f-bb76-e53195ebc1a8",
+  "name": "xrflink",
+  "logFile": "",
+  "commandLine": "/opt/tools/xilinx/Vitis/2020.2/bin/xrflink -f /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/consolidated.cf --hierarchy /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/_kernel_inst_paths.dat",
+  "args": [
+   "-f",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/consolidated.cf",
+   "--hierarchy",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/_kernel_inst_paths.dat"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 13:10:49 2023",
+ "timestampMillis": "1684267849941",
+ "status": {
+  "cmdId": "071059de-d90d-434f-bb76-e53195ebc1a8",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 13:10:59 2023",
+ "timestampMillis": "1684267859081",
+ "status": {
+  "cmdId": "071059de-d90d-434f-bb76-e53195ebc1a8",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 16 13:10:59 2023",
+ "timestampMillis": "1684267859085",
+ "report": {
+  "path": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May 16 13:10:59 2023",
+ "timestampMillis": "1684267859086",
+ "buildStep": {
+  "cmdId": "cabd0893-ee98-4325-ab51-23c71a682712",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/systolic_fpga.hw_emu.rtd",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 13:10:59 2023",
+ "timestampMillis": "1684267859086",
+ "status": {
+  "cmdId": "cabd0893-ee98-4325-ab51-23c71a682712",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 13:10:59 2023",
+ "timestampMillis": "1684267859087",
+ "status": {
+  "cmdId": "cabd0893-ee98-4325-ab51-23c71a682712",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 13:10:59 2023",
+ "timestampMillis": "1684267859087",
+ "status": {
+  "cmdId": "cdccad33-298c-48f5-bdd2-3998cc39e9a4",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May 16 13:10:59 2023",
+ "timestampMillis": "1684267859111",
+ "buildStep": {
+  "cmdId": "dc7001c5-885e-49d0-b442-1b47e8e32514",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section DEBUG_DATA:RAW:/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/consolidated.cf --add-section BITSTREAM:RAW:/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/behav.xse --force --target hw_emu --key-value SYS:dfx_enable:false --add-section :JSON:/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/systolic_fpga.hw_emu.rtd --append-section :JSON:/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/systolic_fpga.hw_emu_xml.rtd --add-section BUILD_METADATA:JSON:/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/systolic_fpga.hw_emu_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/systolic_fpga.hw_emu.xml --add-section SYSTEM_METADATA:RAW:/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/systemDiagramModelSlrBaseAddress.json --output /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/systolic_fpga.hw_emu.xclbin",
+  "args": [
+   "--add-section",
+   "DEBUG_DATA:RAW:/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/consolidated.cf",
+   "--add-section",
+   "BITSTREAM:RAW:/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/behav.xse",
+   "--force",
+   "--target",
+   "hw_emu",
+   "--key-value",
+   "SYS:dfx_enable:false",
+   "--add-section",
+   ":JSON:/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/systolic_fpga.hw_emu.rtd",
+   "--append-section",
+   ":JSON:/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/systolic_fpga.hw_emu_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/systolic_fpga.hw_emu_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/systolic_fpga.hw_emu.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--output",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/systolic_fpga.hw_emu.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 13:10:59 2023",
+ "timestampMillis": "1684267859113",
+ "status": {
+  "cmdId": "dc7001c5-885e-49d0-b442-1b47e8e32514",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 13:11:08 2023",
+ "timestampMillis": "1684267868518",
+ "status": {
+  "cmdId": "dc7001c5-885e-49d0-b442-1b47e8e32514",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May 16 13:11:08 2023",
+ "timestampMillis": "1684267868538",
+ "buildStep": {
+  "cmdId": "1ba99969-447f-4d9c-bbfd-90d1876348e4",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/systolic_fpga.hw_emu.xclbin.info --input /home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/systolic_fpga.hw_emu.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/systolic_fpga.hw_emu.xclbin.info",
+   "--input",
+   "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/systolic_fpga.hw_emu.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 13:11:08 2023",
+ "timestampMillis": "1684267868539",
+ "status": {
+  "cmdId": "1ba99969-447f-4d9c-bbfd-90d1876348e4",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 13:11:17 2023",
+ "timestampMillis": "1684267877378",
+ "status": {
+  "cmdId": "1ba99969-447f-4d9c-bbfd-90d1876348e4",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May 16 13:11:17 2023",
+ "timestampMillis": "1684267877383",
+ "buildStep": {
+  "cmdId": "2c487d3d-af15-4c47-a929-da8457743596",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 13:11:17 2023",
+ "timestampMillis": "1684267877383",
+ "status": {
+  "cmdId": "2c487d3d-af15-4c47-a929-da8457743596",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 13:11:17 2023",
+ "timestampMillis": "1684267877384",
+ "status": {
+  "cmdId": "2c487d3d-af15-4c47-a929-da8457743596",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 16 13:11:17 2023",
+ "timestampMillis": "1684267877400",
+ "report": {
+  "path": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/reports/link/system_estimate_systolic_fpga.hw_emu.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 16 13:11:18 2023",
+ "timestampMillis": "1684267878947",
+ "report": {
+  "path": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/reports/link/v++_link_systolic_fpga.hw_emu_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 16 13:11:18 2023",
+ "timestampMillis": "1684267878948",
+ "report": {
+  "path": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/v++_link_systolic_fpga.hw_emu_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 16 13:11:18 2023",
+ "timestampMillis": "1684267878949",
+ "report": {
+  "path": "/home/stingw/genesys-neuroweaver/genesys-fpga/fpga_framework/build/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 16 13:11:18 2023",
+ "timestampMillis": "1684267878950",
+ "status": {
+  "cmdId": "653a7101-5b39-4dd9-8263-fbbb274ec47a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

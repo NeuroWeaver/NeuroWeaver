@@ -1,0 +1,174 @@
+from simd_sim.simulator.instruction import InstructionRegister
+import numpy as np
+import math 
+
+
+class ProfiledInstruction:
+    def __init__(self, inst_reg, ended_cycle):
+        self.inst_reg = inst_reg
+        self.ended_cycle = ended_cycle
+
+
+class SingleBaseLoopProfiler:
+    def __init__(self, config):
+        self.config = config
+        self.total_base_loop_iterations = None
+        self.stage_cnt = None
+        self.profiled_inst = []
+        self.can_add = True
+        self.ld_req_sizes = []
+        self.st_req_sizes = []
+
+    def add(self, input_reg, ended_cycle):
+        if self.__can_add(input_reg):
+            self.profiled_inst.append(ProfiledInstruction(inst_reg=input_reg, ended_cycle=ended_cycle))
+
+    def finish(self):
+        self.can_add = False
+
+    def profile(self):
+        cycles = []
+        ended_cycles = []
+
+        insts = []
+
+        for inst in self.profiled_inst:
+            cycles.append(inst.ended_cycle)
+            ended_cycles.append(inst.ended_cycle)
+            insts.append(inst.inst_reg)
+        for i in range(len(self.profiled_inst)):
+            if i == 0:
+                cycles[i] = ended_cycles[0]
+            else:
+                cycles[i] = ended_cycles[i] - ended_cycles[i-1]
+
+        #print(ended_cycles)
+        #for v in insts:
+        #    print(f"<op: {v.opcode}, fn: {v.function}> ", end="")
+        #print()
+        #print(cycles)
+
+        start_cycle = cycles.pop(0)
+        last_cycle = cycles.pop(-1)
+
+        total_cycle = 2 + (self.total_base_loop_iterations * np.sum(cycles) - 1) + self.stage_cnt
+        #print (f"tot cycles = {self.total_base_loop_iterations} * {np.sum(cycles)} + {self.stage_cnt}")
+        perTileCycles = 2 + np.sum(cycles) + self.stage_cnt
+    
+        delays_per_base_iter = 0
+        delays_per_base_iter += self.config["state-change-cnt"]
+
+        delay_scale = self.config["ld-scale-of-delay"]
+
+        #print ("ld size = ", self.ld_req_sizes)
+        ## Replace below with Load/Store Time
+        for ld_req_size in self.ld_req_sizes:
+            delays_per_base_iter += ld_req_size * delay_scale + self.config["ld-init-delay-cycles"]
+
+        delay_scale = self.config["st-scale-of-delay"]
+        
+        for st_req_size in self.st_req_sizes:
+            delays_per_base_iter += st_req_size * delay_scale + self.config["st-init-delay-cycles"]
+
+
+        #print ('here 2 == ', delays_per_base_iter, st_req_size, delay_scale, self.config["st-init-delay-cycles"])
+        # delays_per_base_iter += self.config["alu-input-delay"]
+
+        # rohan: todo:  self.total_base_loop_iterations is not correct for fused depthwise conv cases
+        #total_cycle_with_delays = total_cycle + self.total_base_loop_iterations * delays_per_base_iter
+        #total_cycle_with_delays = perTileCycles + delays_per_base_iter
+        total_cycle_with_delays = perTileCycles
+
+        #print (f"total base loop iters = {self.total_base_loop_iterations}, total_cycle_with_delays = {total_cycle_with_delays}")
+        #tmp_ld = ld_req_size * delay_scale + self.config["ld-init-delay-cycles"]
+        #tmp_st = st_req_size * delay_scale + self.config["st-init-delay-cycles"]
+        #print (f"Here : total_cycle : {total_cycle} \n perTileCycles {perTileCycles}")
+        #print (f"Here 1: tmp_ld = {tmp_ld}, tmp_st = {tmp_st}")
+        
+        numTiles = self.total_base_loop_iterations
+        
+        #print ("here 0 == ", self.config['vmemInTileDims'])
+        #print ("here 1 == ", self.config['vmemOutTileDims'])
+        #print ("here 2 == ", self.config['storeNS'])
+        
+        storeCycles, storeTileSize = self.__calculate_store_cycles()
+        loadCycles, loadTileSize = self.__calculate_load_cycles()
+        #print ('here == ', total_cycle_with_delays, perTileCycles, delays_per_base_iter, loadCycles, storeCycles, numTiles)
+        
+        return total_cycle_with_delays, perTileCycles, loadCycles, storeCycles, numTiles, loadTileSize, storeTileSize
+
+    def __calculate_load_cycles(self):
+        
+        _tileSize = 0
+        if len(self.config['vmemInTileDims']) != 0:
+            # todo: add mechanism for multiple VMEM buffers (1 and 2). Add a for loop to 
+            # check for different NS
+            for k1,v1 in self.config['loadNS'].items():
+                _localtileSize = 1
+                for k,v in self.config['vmemInTileDims'][v1][0].items():
+                    _localtileSize *= v
+                
+                _tileSize += _localtileSize
+        
+            ns = list(self.config['loadNS'].keys())[0]
+            
+            ## todo: move this to the above loop, to account for a case when both NS have different data types
+            if 'FXP32' in self.config['vmemInTileDims'][ns][1]['dtype']:
+                _tileSize *= 4
+            elif 'FXP16' in self.config['vmemInTileDims'][ns][1]['dtype']:
+                _tileSize *= 2
+            elif 'FXP8' in self.config['vmemInTileDims'][ns][1]['dtype']:
+                _tileSize *= 1
+            elif 'BF16' in self.config['vmemInTileDims'][ns][1]['dtype']:
+                _tileSize *= 2
+            else:
+                raise ValueError("not implemented : Data Type for output")
+            
+            loadCycles = ((_tileSize * 1.0)/self.config["ddrBandwidth"])/5e-9
+            loadCycles += self.config["ddrLatency"]
+            
+        else:
+            loadCycles = 0
+        return math.ceil(loadCycles), _tileSize
+
+    def __calculate_store_cycles(self):
+        _tileSize = 1
+        #print (self.config['vmemOutTileDims'][self.config['storeNS']])
+
+        for k,v in self.config['vmemOutTileDims'][self.config['storeNS']][0].items():
+            _tileSize *= v 
+        
+        if 'FXP32' in self.config['vmemOutTileDims'][self.config['storeNS']][1]['dtype']:
+            _tileSize *= 4
+        elif 'FXP16' in self.config['vmemOutTileDims'][self.config['storeNS']][1]['dtype']:
+            _tileSize *= 2
+        elif 'FXP8' in self.config['vmemOutTileDims'][self.config['storeNS']][1]['dtype']:
+            _tileSize *= 1
+        elif 'BF16' in self.config['vmemOutTileDims'][self.config['storeNS']][1]['dtype']:
+            _tileSize *= 2
+        else:
+            raise ValueError("not implemented : Data Type for output")
+     
+        storeCycles = ((_tileSize * 1.0)/self.config["ddrBandwidth"])/5e-9
+        storeCycles += self.config["ddrLatency"]
+      
+        return math.ceil(storeCycles), _tileSize
+
+    def __can_add(self, input_reg: InstructionRegister):
+        can_add = False
+        if not self.can_add:
+            return can_add
+
+        opcode = input_reg.opcode
+        function = input_reg.function
+
+        if opcode == 10:
+            can_add = True
+        elif opcode == 5:
+            if (function % 8) == 5:
+                can_add = True
+        elif opcode == 7:
+            if function == 2:
+                can_add = True
+
+        return can_add

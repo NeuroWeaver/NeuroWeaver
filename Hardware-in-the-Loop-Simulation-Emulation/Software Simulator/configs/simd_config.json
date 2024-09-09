@@ -1,0 +1,13 @@
+{
+  "layer-example-path": "/home/rohan/genesys.sim/simd_sim/fpga9_t2_elem_add",
+  "use-double-buffering": false,
+  "fast-run": true,
+  "num-input-to-load-from-ddr": 0,
+  "num-output-to-store-to-ddr": 1,
+  "ld-init-delay-cycles": 80,
+  "ld-scale-of-delay": 1,
+  "st-init-delay-cycles": 80,
+  "st-scale-of-delay": 6,
+  "ddrBandwidth":64000000000,
+  "ddrLatency": 80
+}

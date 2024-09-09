@@ -1,0 +1,4 @@
+// CODELET:	resize117
+inputs=op1['N', 'C', 'H1', 'W1'], scale['DIMS']
+intermediates=
+outputs=out['N', 'C', 'H2', 'W2']

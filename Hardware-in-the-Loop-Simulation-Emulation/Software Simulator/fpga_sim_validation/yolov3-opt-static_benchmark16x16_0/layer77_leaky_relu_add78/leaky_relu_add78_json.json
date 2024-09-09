@@ -1,0 +1,437 @@
+{
+  "mode": "inference",
+  "program": [
+    {
+      "operation": "leaky_relu_add",
+      "instance_id": 78,
+      "iterable_dimensions": {
+        "C": 512,
+        "N": 1,
+        "H": 26,
+        "W": 26
+      },
+      "operation_parameters": {
+        "SIMD_SIZE": 16,
+        "alpha": 0.10000000149011612,
+        "m0": 39321,
+        "nshift": 1966080
+      },
+      "inputs": [
+        {
+          "name": "op1",
+          "unique_name": "convolution_output36_",
+          "dtype": "FXP32",
+          "shape_symbols": {
+            "N": 1,
+            "H": 26,
+            "W": 26,
+            "C": 512
+          },
+          "data_path": [
+            "DRAM",
+            "VMEM2",
+            "SIMD",
+            "VMEM2",
+            "SIMD"
+          ],
+          "tiling": {
+            "DRAM": {
+              "N": 1,
+              "H": 26,
+              "W": 26,
+              "C": 512
+            },
+            "VMEM2": {
+              "N": 1,
+              "H": 26,
+              "W": 2,
+              "C": 128
+            },
+            "SIMD": {
+              "N": 1,
+              "H": 1,
+              "W": 1,
+              "C": 16
+            }
+          }
+        },
+        {
+          "name": "op3",
+          "unique_name": "model_1_add_16_add:0_Y",
+          "dtype": "FXP32",
+          "shape_symbols": {
+            "N": 1,
+            "H": 26,
+            "W": 26,
+            "C": 512
+          },
+          "data_path": [
+            "DRAM",
+            "VMEM1",
+            "SIMD"
+          ],
+          "tiling": {
+            "DRAM": {
+              "N": 1,
+              "H": 26,
+              "W": 26,
+              "C": 512
+            },
+            "VMEM1": {
+              "N": 1,
+              "H": 26,
+              "W": 2,
+              "C": 128
+            },
+            "SIMD": {
+              "N": 1,
+              "H": 1,
+              "W": 1,
+              "C": 16
+            }
+          }
+        }
+      ],
+      "intermediate": [
+        {
+          "name": "alpha",
+          "unique_name": null,
+          "dtype": "FXP32",
+          "shape_symbols": {
+            "SIMD_SIZE": 16
+          },
+          "data_path": [
+            "IMM",
+            "SIMD"
+          ],
+          "tiling": {
+            "IMM": {
+              "SIMD_SIZE": 0
+            }
+          }
+        },
+        {
+          "name": "m0",
+          "unique_name": null,
+          "dtype": "FXP8",
+          "shape_symbols": {
+            "SIMD_SIZE": 16
+          },
+          "data_path": [
+            "IMM"
+          ],
+          "tiling": {}
+        },
+        {
+          "name": "nshift",
+          "unique_name": null,
+          "dtype": "FXP8",
+          "shape_symbols": {
+            "SIMD_SIZE": 16
+          },
+          "data_path": [
+            "IMM"
+          ],
+          "tiling": {}
+        }
+      ],
+      "outputs": [
+        {
+          "name": "out",
+          "unique_name": "model_1_add_17_add:0_Y",
+          "dtype": "FXP32",
+          "shape_symbols": {
+            "N": 1,
+            "H": 26,
+            "W": 26,
+            "C": 512
+          },
+          "data_path": [
+            "SIMD",
+            "VMEM1",
+            "DRAM"
+          ],
+          "tiling": {
+            "VMEM1": {
+              "N": 1,
+              "H": 26,
+              "W": 2,
+              "C": 128
+            },
+            "DRAM": {
+              "N": 1,
+              "H": 26,
+              "W": 26,
+              "C": 512
+            },
+            "SIMD": {
+              "N": 1,
+              "H": 1,
+              "W": 1,
+              "C": 16
+            }
+          }
+        }
+      ],
+      "operation_sequence": [
+        {
+          "op_type": "config",
+          "op_id": 0,
+          "start_or_finish": "start",
+          "target": "SIMD"
+        },
+        {
+          "op_type": "config",
+          "op_id": 1,
+          "start_or_finish": "start",
+          "target": "IMM"
+        },
+        {
+          "op_type": "config",
+          "op_id": 2,
+          "start_or_finish": "start",
+          "target": "IMM"
+        },
+        {
+          "op_type": "config",
+          "op_id": 3,
+          "start_or_finish": "start",
+          "target": "IMM"
+        },
+        {
+          "op_type": "loop",
+          "op_id": 4,
+          "start": 0,
+          "end": 512,
+          "offset": 0,
+          "stride": 128
+        },
+        {
+          "op_type": "loop",
+          "op_id": 5,
+          "start": 0,
+          "end": 1,
+          "offset": 0,
+          "stride": 1
+        },
+        {
+          "op_type": "loop",
+          "op_id": 6,
+          "start": 0,
+          "end": 26,
+          "offset": 0,
+          "stride": 26
+        },
+        {
+          "op_type": "loop",
+          "op_id": 7,
+          "start": 0,
+          "end": 26,
+          "offset": 0,
+          "stride": 2
+        },
+        {
+          "op_type": "transfer",
+          "op_id": 9,
+          "operand": "op3",
+          "transfer_path": [
+            "DRAM",
+            "VMEM1"
+          ],
+          "transfers": {
+            "DRAM->VMEM1": {
+              "size": 346112,
+              "offset": [
+                "DIM:0,LOOPID:1,OFFSET:0",
+                "DIM:1,LOOPID:2,OFFSET:0",
+                "DIM:2,LOOPID:3,OFFSET:0",
+                "DIM:3,LOOPID:0,OFFSET:0"
+              ]
+            },
+            "VMEM1->SIMD": {
+              "size": 6656,
+              "offset": [
+                "DIM:0,LOOPID:5,OFFSET:0",
+                "DIM:1,LOOPID:6,OFFSET:0",
+                "DIM:2,LOOPID:7,OFFSET:0",
+                "DIM:3,LOOPID:4,OFFSET:0"
+              ]
+            }
+          }
+        },
+        {
+          "op_type": "transfer",
+          "op_id": 8,
+          "operand": "op1",
+          "transfer_path": [
+            "DRAM",
+            "VMEM2"
+          ],
+          "transfers": {
+            "DRAM->VMEM2": {
+              "size": 346112,
+              "offset": [
+                "DIM:0,LOOPID:1,OFFSET:0",
+                "DIM:1,LOOPID:2,OFFSET:0",
+                "DIM:2,LOOPID:3,OFFSET:0",
+                "DIM:3,LOOPID:0,OFFSET:0"
+              ]
+            },
+            "VMEM2->SIMD": {
+              "size": 6656,
+              "offset": [
+                "DIM:0,LOOPID:5,OFFSET:0",
+                "DIM:1,LOOPID:6,OFFSET:0",
+                "DIM:2,LOOPID:7,OFFSET:0",
+                "DIM:3,LOOPID:4,OFFSET:0"
+              ]
+            },
+            "SIMD->VMEM2": {
+              "size": 6656,
+              "offset": [
+                "DIM:0,LOOPID:5,OFFSET:0",
+                "DIM:1,LOOPID:6,OFFSET:0",
+                "DIM:2,LOOPID:7,OFFSET:0",
+                "DIM:3,LOOPID:4,OFFSET:0"
+              ]
+            }
+          }
+        },
+        {
+          "op_type": "loop",
+          "op_id": 18,
+          "start": 0,
+          "end": 128,
+          "offset": 0,
+          "stride": 1
+        },
+        {
+          "op_type": "loop",
+          "op_id": 20,
+          "start": 0,
+          "end": 1,
+          "offset": 0,
+          "stride": 1
+        },
+        {
+          "op_type": "loop",
+          "op_id": 22,
+          "start": 0,
+          "end": 26,
+          "offset": 0,
+          "stride": 1
+        },
+        {
+          "op_type": "loop",
+          "op_id": 24,
+          "start": 0,
+          "end": 2,
+          "offset": 0,
+          "stride": 1
+        },
+        {
+          "op_type": "compute",
+          "op_id": 10,
+          "operation_name": "LEAKY_RELU",
+          "target": "SIMD",
+          "sources": [
+            "op1",
+            "alpha"
+          ],
+          "destinations": [
+            "op1"
+          ]
+        },
+        {
+          "op_type": "compute",
+          "op_id": 11,
+          "operation_name": "ADD",
+          "target": "SIMD",
+          "sources": [
+            "op1",
+            "op3"
+          ],
+          "destinations": [
+            "out"
+          ]
+        },
+        {
+          "op_type": "loop_end",
+          "op_id": 25,
+          "loop_name": "loop7"
+        },
+        {
+          "op_type": "loop_end",
+          "op_id": 23,
+          "loop_name": "loop6"
+        },
+        {
+          "op_type": "loop_end",
+          "op_id": 21,
+          "loop_name": "loop5"
+        },
+        {
+          "op_type": "loop_end",
+          "op_id": 19,
+          "loop_name": "loop4"
+        },
+        {
+          "op_type": "transfer",
+          "op_id": 12,
+          "operand": "out",
+          "transfer_path": [
+            "VMEM1",
+            "DRAM"
+          ],
+          "transfers": {
+            "SIMD->VMEM1": {
+              "size": 6656,
+              "offset": [
+                "DIM:0,LOOPID:5,OFFSET:0",
+                "DIM:1,LOOPID:6,OFFSET:0",
+                "DIM:2,LOOPID:7,OFFSET:0",
+                "DIM:3,LOOPID:4,OFFSET:0"
+              ]
+            },
+            "VMEM1->DRAM": {
+              "size": 346112,
+              "offset": [
+                "DIM:0,LOOPID:1,OFFSET:0",
+                "DIM:1,LOOPID:2,OFFSET:0",
+                "DIM:2,LOOPID:3,OFFSET:0",
+                "DIM:3,LOOPID:0,OFFSET:0"
+              ]
+            }
+          }
+        },
+        {
+          "op_type": "loop_end",
+          "op_id": 13,
+          "loop_name": "loop3"
+        },
+        {
+          "op_type": "loop_end",
+          "op_id": 14,
+          "loop_name": "loop2"
+        },
+        {
+          "op_type": "loop_end",
+          "op_id": 15,
+          "loop_name": "loop1"
+        },
+        {
+          "op_type": "loop_end",
+          "op_id": 16,
+          "loop_name": "loop0"
+        },
+        {
+          "op_type": "config",
+          "op_id": 17,
+          "start_or_finish": "end",
+          "target": "SIMD"
+        }
+      ]
+    },
+    "BLOCK_END 1"
+  ]
+}

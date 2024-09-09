@@ -1,0 +1,3 @@
+control_systolic_fpga_vip_pkg.sv,systemverilog,xil_defaultlib,../../../../systolic_fpga_ex.gen/sources_1/ip/control_systolic_fpga_vip/sim/control_systolic_fpga_vip_pkg.sv,incdir="$ref_dir/../../../ipstatic/hdl"incdir="../../../ipstatic/hdl"
+control_systolic_fpga_vip.sv,systemverilog,xil_defaultlib,../../../../systolic_fpga_ex.gen/sources_1/ip/control_systolic_fpga_vip/sim/control_systolic_fpga_vip.sv,incdir="$ref_dir/../../../ipstatic/hdl"incdir="../../../ipstatic/hdl"
+glbl.v,Verilog,xil_defaultlib,glbl.v

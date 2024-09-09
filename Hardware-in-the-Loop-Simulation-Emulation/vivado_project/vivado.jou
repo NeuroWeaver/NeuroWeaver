@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Apr 28 09:22:35 2023
+# Process ID: 2704
+# Current directory: C:/Users/hax032/Desktop/genesys-fpga/vivado_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6536 C:\Users\hax032\Desktop\genesys-fpga\vivado_project\systolic_fpga_ex.xpr
+# Log file: C:/Users/hax032/Desktop/genesys-fpga/vivado_project/vivado.log
+# Journal file: C:/Users/hax032/Desktop/genesys-fpga/vivado_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/hax032/Desktop/genesys-fpga/vivado_project/systolic_fpga_ex.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+add_files -norecurse {C:/Users/hax032/Desktop/genesys-fpga/genesys-systolic/source/simd_src/controller_fsm_group_simd.v C:/Users/hax032/Desktop/genesys-fpga/genesys-systolic/source/simd_src/single_loop.v C:/Users/hax032/Desktop/genesys-fpga/genesys-systolic/source/simd_src/namespace_mux.v C:/Users/hax032/Desktop/genesys-fpga/genesys-systolic/source/simd_src/simd_data_shuffler.v C:/Users/hax032/Desktop/genesys-fpga/genesys-systolic/source/simd_src/mul_unit.v C:/Users/hax032/Desktop/genesys-fpga/genesys-systolic/source/simd_src/comparison_unit.v C:/Users/hax032/Desktop/genesys-fpga/genesys-systolic/source/simd_src/iterator_memories_flexible_ns.v C:/Users/hax032/Desktop/genesys-fpga/genesys-systolic/source/simd_src/nested_loop.v C:/Users/hax032/Desktop/genesys-fpga/genesys-systolic/source/simd_src/iterator_address_gen.v C:/Users/hax032/Desktop/genesys-fpga/genesys-systolic/source/simd_src/arithmetic_unit.v C:/Users/hax032/Desktop/genesys-fpga/genesys-systolic/source/simd_src/pipeline.v C:/Users/hax032/Desktop/genesys-fpga/genesys-systolic/source/simd_src/SIMD_top.v C:/Users/hax032/Desktop/genesys-fpga/genesys-systolic/source/simd_src/compute_unit.v C:/Users/hax032/Desktop/genesys-fpga/genesys-systolic/source/simd_src/datatype_cast.v C:/Users/hax032/Desktop/genesys-fpga/genesys-systolic/source/simd_src/execute_control_pipelines.v C:/Users/hax032/Desktop/genesys-fpga/genesys-systolic/source/simd_src/iterator_address_gen_new.v C:/Users/hax032/Desktop/genesys-fpga/genesys-systolic/source/simd_src/mem_walker_stride_group_simd.v C:/Users/hax032/Desktop/genesys-fpga/genesys-systolic/source/simd_src/saturate.v C:/Users/hax032/Desktop/genesys-fpga/genesys-systolic/source/simd_src/calculus_unit.v C:/Users/hax032/Desktop/genesys-fpga/genesys-systolic/source/simd_src/iterators.v C:/Users/hax032/Desktop/genesys-fpga/genesys-systolic/source/simd_src/SIMD_instruction_decoder.v}
+update_compile_order -fileset sources_1

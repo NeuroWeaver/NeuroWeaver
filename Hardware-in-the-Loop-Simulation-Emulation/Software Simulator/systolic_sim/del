@@ -1,0 +1,1265 @@
+HERE 1, 1, 1, 1, 1, 2, 2
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+_totMemLatency = 4308.0
+
+_totMemLatency = 195.99999999999997
+
+_totMemLatency = 195.99999999999997
+
+here obuf 3135.9999999999995 + 15000
+_totMemLatency = 195.99999999999997
+
+here obuf 3135.9999999999995 + 15000
+_totMemLatency = 0.0
+
+here obuf 3135.9999999999995 + 15000
+here obuf 3135.9999999999995 + 15000
+HERE 1, 1, 1, 1, 1, 1, 14
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+array idx 4
+array idx 5
+array idx 6
+array idx 7
+array idx 8
+array idx 9
+array idx 10
+array idx 11
+array idx 12
+array idx 13
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+_totMemLatency = 2728.0
+
+_totMemLatency = 672.0
+
+_totMemLatency = 672.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 672.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 672.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 672.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 672.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 672.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 672.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 672.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 672.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 672.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 672.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 672.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 0.0
+
+here obuf 1792.0 + 15000
+here obuf 1792.0 + 15000
+HERE 1, 1, 1, 1, 1, 1, 2
+array idx 0
+array idx 1
+
+ ibuf reuse Here 10: [0, 0, 1, 1, 1]
+
+ obuf reuse Here 10: [0, 0, 1, 1, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 1]
+_totMemLatency = 9796.0
+
+_totMemLatency = 576.0
+
+_totMemLatency = 0.0
+
+here obuf 1567.9999999999998 + 15000
+here obuf 1567.9999999999998 + 15000
+HERE 1, 1, 1, 1, 1, 1, 7
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+array idx 4
+array idx 5
+array idx 6
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+_totMemLatency = 37256.0
+
+_totMemLatency = 383.99999999999994
+
+_totMemLatency = 383.99999999999994
+
+here obuf 224.0 + 15000
+_totMemLatency = 383.99999999999994
+
+here obuf 224.0 + 15000
+_totMemLatency = 383.99999999999994
+
+here obuf 224.0 + 15000
+_totMemLatency = 383.99999999999994
+
+here obuf 224.0 + 15000
+_totMemLatency = 383.99999999999994
+
+here obuf 224.0 + 15000
+_totMemLatency = 0.0
+
+here obuf 224.0 + 15000
+here obuf 224.0 + 15000
+HERE 1, 1, 1, 1, 1, 1, 14
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+array idx 4
+array idx 5
+array idx 6
+array idx 7
+array idx 8
+array idx 9
+array idx 10
+array idx 11
+array idx 12
+array idx 13
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+_totMemLatency = 1153.0000000000002
+
+_totMemLatency = 896.0
+
+_totMemLatency = 896.0
+
+here obuf 896.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 896.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 896.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 896.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 896.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 896.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 896.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 896.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 896.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 896.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 896.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 896.0 + 15000
+_totMemLatency = 0.0
+
+here obuf 896.0 + 15000
+here obuf 896.0 + 15000
+HERE 1, 1, 1, 1, 1, 2, 4
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+array idx 4
+array idx 5
+array idx 6
+array idx 7
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+_totMemLatency = 3176.0
+
+_totMemLatency = 870.0
+
+_totMemLatency = 870.0
+
+here obuf 783.9999999999999 + 15000
+_totMemLatency = 870.0
+
+here obuf 783.9999999999999 + 15000
+_totMemLatency = 870.0
+
+here obuf 783.9999999999999 + 15000
+_totMemLatency = 870.0
+
+here obuf 783.9999999999999 + 15000
+_totMemLatency = 870.0
+
+here obuf 783.9999999999999 + 15000
+_totMemLatency = 870.0
+
+here obuf 783.9999999999999 + 15000
+_totMemLatency = 0.0
+
+here obuf 783.9999999999999 + 15000
+here obuf 783.9999999999999 + 15000
+HERE 2, 1, 1, 1, 1, 2, 2
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+array idx 4
+array idx 5
+array idx 6
+array idx 7
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 0, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 0, 1, 1, 1, 1]
+_totMemLatency = 1353.0
+
+_totMemLatency = 200.0
+
+_totMemLatency = 200.0
+
+here obuf 64.0 + 15000
+_totMemLatency = 200.0
+
+here obuf 64.0 + 15000
+_totMemLatency = 1353.0
+
+here obuf 64.0 + 15000
+_totMemLatency = 200.0
+
+here obuf 64.0 + 15000
+_totMemLatency = 200.0
+
+here obuf 64.0 + 15000
+_totMemLatency = 200.0
+
+here obuf 64.0 + 15000
+here obuf 64.0 + 15000
+here obuf 64.0 + 15000
+HERE 1, 1, 1, 1, 1, 1, 7
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+array idx 4
+array idx 5
+array idx 6
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+_totMemLatency = 16616.000000000004
+
+_totMemLatency = 224.0
+
+_totMemLatency = 224.0
+
+here obuf 224.0 + 15000
+_totMemLatency = 224.0
+
+here obuf 224.0 + 15000
+_totMemLatency = 224.0
+
+here obuf 224.0 + 15000
+_totMemLatency = 224.0
+
+here obuf 224.0 + 15000
+_totMemLatency = 224.0
+
+here obuf 224.0 + 15000
+_totMemLatency = 0.0
+
+here obuf 224.0 + 15000
+here obuf 224.0 + 15000
+HERE 2, 1, 1, 1, 1, 1, 1
+array idx 0
+array idx 1
+
+ ibuf reuse Here 10: [0, 1, 1, 1, 1]
+
+ obuf reuse Here 10: [0, 0, 1, 1, 1]
+
+ wbuf reuse Here 10: [0, 0, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 0, 1, 1, 1]
+_totMemLatency = 8600.0
+
+_totMemLatency = 8208.0
+
+_totMemLatency = 0.0
+
+here obuf 3135.9999999999995 + 15000
+here obuf 3135.9999999999995 + 15000
+HERE 1, 1, 1, 1, 1, 1, 7
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+array idx 4
+array idx 5
+array idx 6
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+_totMemLatency = 2948.0
+
+_totMemLatency = 896.0
+
+_totMemLatency = 896.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 0.0
+
+here obuf 1792.0 + 15000
+here obuf 1792.0 + 15000
+HERE 1, 1, 1, 1, 1, 1, 14
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+array idx 4
+array idx 5
+array idx 6
+array idx 7
+array idx 8
+array idx 9
+array idx 10
+array idx 11
+array idx 12
+array idx 13
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+_totMemLatency = 1410.0
+
+_totMemLatency = 896.0
+
+_totMemLatency = 896.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 0.0
+
+here obuf 1792.0 + 15000
+here obuf 1792.0 + 15000
+HERE 1, 1, 1, 1, 1, 2, 2
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+_totMemLatency = 8984.0
+
+_totMemLatency = 783.9999999999999
+
+_totMemLatency = 783.9999999999999
+
+here obuf 1567.9999999999998 + 15000
+_totMemLatency = 783.9999999999999
+
+here obuf 1567.9999999999998 + 15000
+_totMemLatency = 0.0
+
+here obuf 1567.9999999999998 + 15000
+here obuf 1567.9999999999998 + 15000
+HERE 2, 1, 1, 1, 1, 2, 2
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+array idx 4
+array idx 5
+array idx 6
+array idx 7
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 0, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 0, 1, 1, 1, 1]
+_totMemLatency = 1250.9999999999998
+
+_totMemLatency = 97.99999999999999
+
+_totMemLatency = 97.99999999999999
+
+here obuf 100.0 + 15000
+_totMemLatency = 97.99999999999999
+
+here obuf 100.0 + 15000
+_totMemLatency = 1250.9999999999998
+
+here obuf 100.0 + 15000
+_totMemLatency = 97.99999999999999
+
+here obuf 100.0 + 15000
+_totMemLatency = 97.99999999999999
+
+here obuf 100.0 + 15000
+_totMemLatency = 97.99999999999999
+
+here obuf 100.0 + 15000
+here obuf 100.0 + 15000
+here obuf 100.0 + 15000
+HERE 1, 1, 1, 1, 1, 1, 7
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+array idx 4
+array idx 5
+array idx 6
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+_totMemLatency = 33024.0
+
+_totMemLatency = 224.0
+
+_totMemLatency = 224.0
+
+here obuf 896.0 + 15000
+_totMemLatency = 224.0
+
+here obuf 896.0 + 15000
+_totMemLatency = 224.0
+
+here obuf 896.0 + 15000
+_totMemLatency = 224.0
+
+here obuf 896.0 + 15000
+_totMemLatency = 224.0
+
+here obuf 896.0 + 15000
+_totMemLatency = 0.0
+
+here obuf 896.0 + 15000
+here obuf 896.0 + 15000
+HERE 2, 1, 1, 1, 1, 2, 2
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+array idx 4
+array idx 5
+array idx 6
+array idx 7
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 0, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 0, 1, 1, 1, 1]
+_totMemLatency = 3401.0
+
+_totMemLatency = 200.0
+
+_totMemLatency = 200.0
+
+here obuf 144.0 + 15000
+_totMemLatency = 200.0
+
+here obuf 144.0 + 15000
+_totMemLatency = 3401.0
+
+here obuf 144.0 + 15000
+_totMemLatency = 200.0
+
+here obuf 144.0 + 15000
+_totMemLatency = 200.0
+
+here obuf 144.0 + 15000
+_totMemLatency = 200.0
+
+here obuf 144.0 + 15000
+here obuf 144.0 + 15000
+here obuf 144.0 + 15000
+HERE 1, 1, 1, 1, 1, 1, 2
+array idx 0
+array idx 1
+
+ ibuf reuse Here 10: [0, 0, 1, 1, 1]
+
+ obuf reuse Here 10: [0, 0, 1, 1, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 1]
+_totMemLatency = 3266.0
+
+_totMemLatency = 959.9999999999999
+
+_totMemLatency = 0.0
+
+here obuf 3135.9999999999995 + 15000
+here obuf 3135.9999999999995 + 15000
+HERE 2, 1, 1, 1, 1, 2, 2
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+array idx 4
+array idx 5
+array idx 6
+array idx 7
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 0, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 0, 1, 1, 1, 1]
+_totMemLatency = 1250.9999999999998
+
+_totMemLatency = 97.99999999999999
+
+_totMemLatency = 97.99999999999999
+
+here obuf 36.0 + 15000
+_totMemLatency = 97.99999999999999
+
+here obuf 36.0 + 15000
+_totMemLatency = 1250.9999999999998
+
+here obuf 36.0 + 15000
+_totMemLatency = 97.99999999999999
+
+here obuf 36.0 + 15000
+_totMemLatency = 97.99999999999999
+
+here obuf 36.0 + 15000
+_totMemLatency = 97.99999999999999
+
+here obuf 36.0 + 15000
+here obuf 36.0 + 15000
+here obuf 36.0 + 15000
+HERE 1, 1, 1, 1, 1, 1, 7
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+array idx 4
+array idx 5
+array idx 6
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+_totMemLatency = 1256.0
+
+_totMemLatency = 224.0
+
+_totMemLatency = 224.0
+
+here obuf 3584.0 + 15000
+_totMemLatency = 224.0
+
+here obuf 3584.0 + 15000
+_totMemLatency = 224.0
+
+here obuf 3584.0 + 15000
+_totMemLatency = 224.0
+
+here obuf 3584.0 + 15000
+_totMemLatency = 224.0
+
+here obuf 3584.0 + 15000
+_totMemLatency = 0.0
+
+here obuf 3584.0 + 15000
+here obuf 3584.0 + 15000
+HERE 2, 1, 1, 1, 1, 2, 2
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+array idx 4
+array idx 5
+array idx 6
+array idx 7
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 0, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 0, 1, 1, 1, 1]
+_totMemLatency = 178.99999999999997
+
+_totMemLatency = 50.0
+
+_totMemLatency = 50.0
+
+here obuf 100.0 + 15000
+_totMemLatency = 50.0
+
+here obuf 100.0 + 15000
+_totMemLatency = 178.99999999999997
+
+here obuf 100.0 + 15000
+_totMemLatency = 50.0
+
+here obuf 100.0 + 15000
+_totMemLatency = 50.0
+
+here obuf 100.0 + 15000
+_totMemLatency = 50.0
+
+here obuf 100.0 + 15000
+here obuf 100.0 + 15000
+here obuf 100.0 + 15000
+HERE 2, 1, 1, 1, 1, 2, 2
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+array idx 4
+array idx 5
+array idx 6
+array idx 7
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 0, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 0, 1, 1, 1, 1]
+_totMemLatency = 3299.0
+
+_totMemLatency = 97.99999999999999
+
+_totMemLatency = 97.99999999999999
+
+here obuf 16.0 + 15000
+_totMemLatency = 97.99999999999999
+
+here obuf 16.0 + 15000
+_totMemLatency = 3299.0
+
+here obuf 16.0 + 15000
+_totMemLatency = 97.99999999999999
+
+here obuf 16.0 + 15000
+_totMemLatency = 97.99999999999999
+
+here obuf 16.0 + 15000
+_totMemLatency = 97.99999999999999
+
+here obuf 16.0 + 15000
+here obuf 16.0 + 15000
+here obuf 16.0 + 15000
+HERE 1, 1, 1, 1, 1, 1, 14
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+array idx 4
+array idx 5
+array idx 6
+array idx 7
+array idx 8
+array idx 9
+array idx 10
+array idx 11
+array idx 12
+array idx 13
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+_totMemLatency = 483.99999999999994
+
+_totMemLatency = 224.0
+
+_totMemLatency = 224.0
+
+here obuf 3584.0 + 15000
+_totMemLatency = 224.0
+
+here obuf 3584.0 + 15000
+_totMemLatency = 224.0
+
+here obuf 3584.0 + 15000
+_totMemLatency = 224.0
+
+here obuf 3584.0 + 15000
+_totMemLatency = 224.0
+
+here obuf 3584.0 + 15000
+_totMemLatency = 224.0
+
+here obuf 3584.0 + 15000
+_totMemLatency = 224.0
+
+here obuf 3584.0 + 15000
+_totMemLatency = 224.0
+
+here obuf 3584.0 + 15000
+_totMemLatency = 224.0
+
+here obuf 3584.0 + 15000
+_totMemLatency = 224.0
+
+here obuf 3584.0 + 15000
+_totMemLatency = 224.0
+
+here obuf 3584.0 + 15000
+_totMemLatency = 224.0
+
+here obuf 3584.0 + 15000
+_totMemLatency = 0.0
+
+here obuf 3584.0 + 15000
+here obuf 3584.0 + 15000
+HERE 1, 1, 1, 1, 1, 1, 4
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+_totMemLatency = 849.0
+
+_totMemLatency = 783.9999999999999
+
+_totMemLatency = 783.9999999999999
+
+here obuf 3135.9999999999995 + 15000
+_totMemLatency = 783.9999999999999
+
+here obuf 3135.9999999999995 + 15000
+_totMemLatency = 0.0
+
+here obuf 3135.9999999999995 + 15000
+here obuf 3135.9999999999995 + 15000
+HERE 2, 1, 1, 1, 1, 2, 2
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+array idx 4
+array idx 5
+array idx 6
+array idx 7
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 0, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 0, 1, 1, 1, 1]
+_totMemLatency = 1441.0
+
+_totMemLatency = 288.0
+
+_totMemLatency = 288.0
+
+here obuf 64.0 + 15000
+_totMemLatency = 288.0
+
+here obuf 64.0 + 15000
+_totMemLatency = 1441.0
+
+here obuf 64.0 + 15000
+_totMemLatency = 288.0
+
+here obuf 64.0 + 15000
+_totMemLatency = 288.0
+
+here obuf 64.0 + 15000
+_totMemLatency = 288.0
+
+here obuf 64.0 + 15000
+here obuf 64.0 + 15000
+here obuf 64.0 + 15000
+HERE 2, 1, 1, 1, 1, 1, 1
+array idx 0
+array idx 1
+
+ ibuf reuse Here 10: [0, 1, 1, 1, 1]
+
+ obuf reuse Here 10: [0, 0, 1, 1, 1]
+
+ wbuf reuse Here 10: [0, 0, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 0, 1, 1, 1]
+_totMemLatency = 19084.0
+
+_totMemLatency = 18436.0
+
+_totMemLatency = 0.0
+
+here obuf 783.9999999999999 + 15000
+here obuf 783.9999999999999 + 15000
+HERE 1, 1, 1, 1, 1, 1, 7
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+array idx 4
+array idx 5
+array idx 6
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+_totMemLatency = 1921.9999999999998
+
+_totMemLatency = 896.0
+
+_totMemLatency = 896.0
+
+here obuf 896.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 896.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 896.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 896.0 + 15000
+_totMemLatency = 896.0
+
+here obuf 896.0 + 15000
+_totMemLatency = 0.0
+
+here obuf 896.0 + 15000
+here obuf 896.0 + 15000
+HERE 1, 1, 1, 1, 1, 1, 4
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+_totMemLatency = 1504.9999999999998
+
+_totMemLatency = 927.9999999999999
+
+_totMemLatency = 927.9999999999999
+
+here obuf 3135.9999999999995 + 15000
+_totMemLatency = 927.9999999999999
+
+here obuf 3135.9999999999995 + 15000
+_totMemLatency = 0.0
+
+here obuf 3135.9999999999995 + 15000
+here obuf 3135.9999999999995 + 15000
+HERE 1, 1, 1, 1, 1, 2, 2
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+_totMemLatency = 4884.0
+
+_totMemLatency = 783.9999999999999
+
+_totMemLatency = 783.9999999999999
+
+here obuf 783.9999999999999 + 15000
+_totMemLatency = 783.9999999999999
+
+here obuf 783.9999999999999 + 15000
+_totMemLatency = 0.0
+
+here obuf 783.9999999999999 + 15000
+here obuf 783.9999999999999 + 15000
+HERE 1, 1, 1, 1, 1, 2, 2
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+_totMemLatency = 10120.0
+
+_totMemLatency = 900.0
+
+_totMemLatency = 900.0
+
+here obuf 783.9999999999999 + 15000
+_totMemLatency = 900.0
+
+here obuf 783.9999999999999 + 15000
+_totMemLatency = 0.0
+
+here obuf 783.9999999999999 + 15000
+here obuf 783.9999999999999 + 15000
+HERE 2, 1, 1, 1, 1, 2, 2
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+array idx 4
+array idx 5
+array idx 6
+array idx 7
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 0, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 0, 1, 1, 1, 1]
+_totMemLatency = 1441.0
+
+_totMemLatency = 288.0
+
+_totMemLatency = 288.0
+
+here obuf 256.0 + 15000
+_totMemLatency = 288.0
+
+here obuf 256.0 + 15000
+_totMemLatency = 1441.0
+
+here obuf 256.0 + 15000
+_totMemLatency = 288.0
+
+here obuf 256.0 + 15000
+_totMemLatency = 288.0
+
+here obuf 256.0 + 15000
+_totMemLatency = 288.0
+
+here obuf 256.0 + 15000
+here obuf 256.0 + 15000
+here obuf 256.0 + 15000
+HERE 1, 1, 1, 1, 1, 1, 7
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+array idx 4
+array idx 5
+array idx 6
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+_totMemLatency = 8880.0
+
+_totMemLatency = 672.0
+
+_totMemLatency = 672.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 672.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 672.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 672.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 672.0
+
+here obuf 1792.0 + 15000
+_totMemLatency = 0.0
+
+here obuf 1792.0 + 15000
+here obuf 1792.0 + 15000
+HERE 2, 1, 1, 1, 1, 2, 2
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+array idx 4
+array idx 5
+array idx 6
+array idx 7
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 0, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 0, 1, 1, 1, 1]
+_totMemLatency = 3299.0
+
+_totMemLatency = 97.99999999999999
+
+_totMemLatency = 97.99999999999999
+
+here obuf 16.0 + 15000
+_totMemLatency = 97.99999999999999
+
+here obuf 16.0 + 15000
+_totMemLatency = 3299.0
+
+here obuf 16.0 + 15000
+_totMemLatency = 97.99999999999999
+
+here obuf 16.0 + 15000
+_totMemLatency = 97.99999999999999
+
+here obuf 16.0 + 15000
+_totMemLatency = 97.99999999999999
+
+here obuf 16.0 + 15000
+here obuf 16.0 + 15000
+here obuf 16.0 + 15000
+HERE 2, 1, 1, 1, 1, 2, 2
+array idx 0
+array idx 1
+array idx 2
+array idx 3
+array idx 4
+array idx 5
+array idx 6
+array idx 7
+
+ ibuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+ obuf reuse Here 10: [0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+ wbuf reuse Here 10: [0, 1, 1, 1, 0, 1, 1, 1, 1]
+
+ bbuf reuse Here 10: [0, 1, 1, 1, 0, 1, 1, 1, 1]
+_totMemLatency = 1545.0000000000002
+
+_totMemLatency = 391.99999999999994
+
+_totMemLatency = 391.99999999999994
+
+here obuf 144.0 + 15000
+_totMemLatency = 391.99999999999994
+
+here obuf 144.0 + 15000
+_totMemLatency = 1545.0000000000002
+
+here obuf 144.0 + 15000
+_totMemLatency = 391.99999999999994
+
+here obuf 144.0 + 15000
+_totMemLatency = 391.99999999999994
+
+here obuf 144.0 + 15000
+_totMemLatency = 391.99999999999994
+
+here obuf 144.0 + 15000
+here obuf 144.0 + 15000
+here obuf 144.0 + 15000
+layerName                      totalCycles                                                            P  e  r     T  i  l  e     C  y  c  l  e  
+resnet50_custom_conv_8x8_t4_12 840724                                                                 19308.0  200720  200720  200720  200720  18136.0  
+resnet50_custom_conv_8x8_t4_7  1640776                                                                17728.0  114704  114704  114704  114704  114704  114704  114704  114704  114704  114704  114704  114704  114704  114704  16792.0  
+resnet50_custom_conv_8x8_t4_15 1848132                                                                24796.0  903184  903184  16568.0        
+resnet50_custom_conv_8x8_t4_17 1874328                                                                52256.0  258064  258064  258064  258064  258064  258064  258064  15224.0  
+resnet50_custom_conv_8x8_t4_3  835489                                                                 16153.0  57360  57360  57360  57360  57360  57360  57360  57360  57360  57360  57360  57360  57360  57360  15896.0  
+resnet50_custom_conv_8x8_t4_5  1840824                                                                18176.0  225808  225808  225808  225808  225808  225808  225808  225808  15784.0  
+fpga_8x8_tile3_case7_oc_oh_ow_conv 244818                                                                 16353.0  15200.0  30264.0  30264.0  31417.0  30264.0  30264.0  30264.0  15064.0  15064.0  
+resnet50_custom_conv_8x8_t4_20 850169                                                                 31616.000000000004  114704  114704  114704  114704  114704  114704  114704  15224.0  
+resnet50_custom_conv_8x8_t4_18 844984                                                                 23600.0  401424  401424  18136.0        
+resnet50_custom_conv_8x8_t4_10 1640884                                                                17948.0  229392  229392  229392  229392  229392  229392  229392  16792.0  
+resnet50_custom_conv_8x8_t4_4  1639458                                                                16410.0  114704  114704  114704  114704  114704  114704  114704  114704  114704  114704  114704  114704  114704  114704  16792.0  
+resnet50_custom_conv_8x8_t4_16 1646648                                                                23984.0  401424  401424  401424  401424  16568.0  
+fpga_8x8_tile3_case0_oc_oh_ow_conv 271724                                                                 16251.0  28816  30198.0  30198.0  31351.0  30198.0  30198.0  30198.0  28816  15100.0  
+resnet50_custom_conv_8x8_t4_19 1670064                                                                48024.0  229392  229392  229392  229392  229392  229392  229392  15896.0  
+fpga_8x8_tile3_case2_oc_oh_ow_conv 955673                                                                 18401.0  115216  115216  115216  115216  115216  115216  115216  115216  15144.0  
+resnet50_custom_conv_8x8_t4_9  1843170                                                                18266.0  903184  903184  18136.0        
+fpga_8x8_tile3_case1_oc_oh_ow_conv 243778                                                                 16251.0  15098.0  30134.0  30134.0  31287.0  30134.0  30134.0  30134.0  15036.0  15036.0  
+resnet50_custom_conv_8x8_t4_6  838168                                                                 16256.0  114704  114704  114704  114704  114704  114704  114704  18584.0  
+fpga_8x8_tile3_case5_oc_oh_ow_conv 241858                                                                 15179.0  15050.0  30150.0  30150.0  30279.0  30150.0  30150.0  30150.0  15100.0  15100.0  
+fpga_8x8_tile3_case3_oc_oh_ow_conv 247714                                                                 18299.0  15098.0  30114.0  30114.0  33315.0  30114.0  30114.0  30114.0  15016.0  15016.0  
+resnet50_custom_conv_8x8_t4_2  837508                                                                 15484.0  57360  57360  57360  57360  57360  57360  57360  57360  57360  57360  57360  57360  57360  57360  18584.0  
+resnet50_custom_conv_8x8_t4_0  235153                                                                 15849.0  50192  50192  50192  50192  18136.0  
+fpga_8x8_tile3_case9_oc_oh_ow_conv 245522                                                                 16441.0  15288.0  30352.0  30352.0  31505.0  30352.0  30352.0  30352.0  15064.0  15064.0  
+resnet50_custom_conv_8x8_t4_21 1856636                                                                34084.0  903184  903184  15784.0        
+resnet50_custom_conv_8x8_t4_8  836146                                                                 16922.0  114704  114704  114704  114704  114704  114704  114704  15896.0  
+resnet50_custom_conv_8x8_t4_1  1841441                                                                16505.0  451600  451600  451600  451600  18136.0  
+resnet50_custom_conv_8x8_t4_14 838948                                                                 19884.0  200720  200720  200720  200720  15784.0  
+resnet50_custom_conv_8x8_t4_11 1847704                                                                25120.0  451600  451600  451600  451600  15784.0  
+fpga_8x8_tile3_case6_oc_oh_ow_conv 253410                                                                 16441.0  18448  30544.0  30544.0  31697.0  30544.0  30544.0  30544.0  18448  15256.0  
+resnet50_custom_conv_8x8_t4_13 1646816                                                                23880.0  229392  229392  229392  229392  229392  229392  229392  16792.0  
+fpga_8x8_tile3_case4_oc_oh_ow_conv 247714                                                                 18299.0  15098.0  30114.0  30114.0  33315.0  30114.0  30114.0  30114.0  15016.0  15016.0  
+fpga_8x8_tile3_case8_oc_oh_ow_conv 246994                                                                 16545.0  15392.0  30536.0  30536.0  31689.0  30536.0  30536.0  30536.0  15144.0  15144.0  

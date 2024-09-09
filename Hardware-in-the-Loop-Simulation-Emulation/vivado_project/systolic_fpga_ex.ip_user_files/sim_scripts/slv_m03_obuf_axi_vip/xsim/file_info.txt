@@ -1,0 +1,3 @@
+slv_m03_obuf_axi_vip_pkg.sv,systemverilog,xil_defaultlib,../../../../systolic_fpga_ex.gen/sources_1/ip/slv_m03_obuf_axi_vip/sim/slv_m03_obuf_axi_vip_pkg.sv,incdir="$ref_dir/../../../ipstatic/hdl"incdir="../../../ipstatic/hdl"
+slv_m03_obuf_axi_vip.sv,systemverilog,xil_defaultlib,../../../../systolic_fpga_ex.gen/sources_1/ip/slv_m03_obuf_axi_vip/sim/slv_m03_obuf_axi_vip.sv,incdir="$ref_dir/../../../ipstatic/hdl"incdir="../../../ipstatic/hdl"
+glbl.v,Verilog,xil_defaultlib,glbl.v

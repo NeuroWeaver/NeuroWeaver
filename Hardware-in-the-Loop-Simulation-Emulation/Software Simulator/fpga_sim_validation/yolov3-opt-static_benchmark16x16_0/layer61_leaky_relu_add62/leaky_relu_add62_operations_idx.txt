@@ -1,0 +1,30 @@
+// CODELET:	leaky_relu_add62
+inputs=op1['N', 'H', 'W', 'C'], op3['N', 'H', 'W', 'C']
+intermediates=alpha['SIMD_SIZE'], m0['SIMD_SIZE'], nshift['SIMD_SIZE']
+outputs=out['N', 'H', 'W', 'C']
+0	config0: start-SIMD
+1	config1: start-IMM
+2	config2: start-IMM
+3	config3: start-IMM
+4	(C)loop0[0]: START=0; STOP=512; STRIDE=128; OFFSET:0
+5		(N)loop1[1]: START=0; STOP=1; STRIDE=1; OFFSET:0
+6			(H)loop2[2]: START=0; STOP=26; STRIDE=26; OFFSET:0
+7				(W)loop3[3]: START=0; STOP=26; STRIDE=2; OFFSET:0
+8					transfer1: OPERAND: op3[DRAM->VMEM1], SIZES: [[1, 26, 26, 512], [1, 26, 2, 128]]
+9					transfer0: OPERAND: op1[DRAM->VMEM2], SIZES: [[1, 26, 26, 512], [1, 26, 2, 128]]
+10					(C)loop4[4]: START=0; STOP=128; STRIDE=1; OFFSET:0
+11						(N)loop5[5]: START=0; STOP=1; STRIDE=1; OFFSET:0
+12							(H)loop6[6]: START=0; STOP=26; STRIDE=1; OFFSET:0
+13								(W)loop7[7]: START=0; STOP=2; STRIDE=1; OFFSET:0
+14									compute0: SIMD-LEAKY_RELU(['op1', 'alpha'])->['op1']
+15									compute1: SIMD-ADD(['op1', 'op3'])->['out']
+16								loop7: END
+17							loop6: END
+18						loop5: END
+19					loop4: END
+20					transfer2: OPERAND: out[VMEM1->DRAM], SIZES: [[1, 26, 2, 128], [1, 26, 26, 512]]
+21				loop3: END
+22			loop2: END
+23		loop1: END
+24	loop0: END
+25	config4: end-SIMD

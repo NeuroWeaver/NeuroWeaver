@@ -1,0 +1,4 @@
+// CODELET:	coarse_flatten105
+inputs=data['N', 'H', 'W', 'C']
+intermediates=
+outputs=out['N', 'OC']

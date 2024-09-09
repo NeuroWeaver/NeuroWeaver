@@ -1,0 +1,26 @@
+{
+  "flatten_120_494Y": {
+    "cdlt": "gemm57",
+    "path": "/home/rohan/compiler/codelets.src-latest/examples/genesys/../../tools/compilation_output/resnet50_benchmark16x16_2/layer56_gemm57/data/flatten_120_494Y/",
+    "cdlt_name": "data",
+    "operand_type": "input"
+  },
+  "fc.weight": {
+    "cdlt": "gemm57",
+    "path": "/home/rohan/compiler/codelets.src-latest/examples/genesys/../../tools/compilation_output/resnet50_benchmark16x16_2/layer56_gemm57/data/fc.weight/",
+    "cdlt_name": "weight",
+    "operand_type": "input"
+  },
+  "fc.bias": {
+    "cdlt": "gemm57",
+    "path": "/home/rohan/compiler/codelets.src-latest/examples/genesys/../../tools/compilation_output/resnet50_benchmark16x16_2/layer56_gemm57/data/fc.bias.txt",
+    "cdlt_name": "bias",
+    "operand_type": "input"
+  },
+  "output": {
+    "cdlt": "gemm57",
+    "path": "/home/rohan/compiler/codelets.src-latest/examples/genesys/../../tools/compilation_output/resnet50_benchmark16x16_2/layer56_gemm57/data/output.txt",
+    "cdlt_name": "out",
+    "operand_type": "output"
+  }
+}

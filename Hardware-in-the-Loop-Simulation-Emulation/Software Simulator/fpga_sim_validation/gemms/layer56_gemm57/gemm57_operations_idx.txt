@@ -1,0 +1,46 @@
+// CODELET:	gemm57
+inputs=data['M', 'N'], weight['N', 'P'], bias['P']
+intermediates=gemm_out['M', 'P'], m0['SIMD_SIZE'], nshift['SIMD_SIZE']
+outputs=out['M', 'P']
+0	config0: start-systolic_array
+1	config1: start-WBUF
+2	config2: start-IBUF
+3	config3: start-BBUF
+4	config4: start-OBUF
+5	(P)loop0[0]: START=0; STOP=1024; STRIDE=256; OFFSET:0
+6		transfer2: OPERAND: bias[DRAM->BBUF], SIZES: [[1024], [256]]
+7		(N)loop1[1]: START=0; STOP=2048; STRIDE=2048; OFFSET:0
+8			transfer1: OPERAND: weight[DRAM->WBUF], SIZES: [[2048, 1024], [2048, 256]]
+9			(M)loop2[2]: START=0; STOP=1; STRIDE=1; OFFSET:0
+10				transfer3: OPERAND: gemm_out[DRAM->OBUF], SIZES: [[1, 1024], [1, 256]]
+11				transfer0: OPERAND: data[DRAM->IBUF], SIZES: [[1, 2048], [1, 2048]]
+12				(P)loop5[3]: START=0; STOP=256; STRIDE=1; OFFSET:0
+13					(N)loop6[4]: START=0; STOP=2048; STRIDE=1; OFFSET:0
+14						(M)loop7[5]: START=0; STOP=1; STRIDE=1; OFFSET:0
+15							compute0: pe_array-MVMUL(['data', 'weight', 'bias', 'gemm_out'])->['gemm_out']
+16						loop7: END
+17					loop6: END
+18				loop5: END
+19			loop2: END
+20		loop1: END
+21	loop0: END
+22	config5: end-WBUF
+23	config6: end-IBUF
+24	config7: end-OBUF
+25	config8: end-BBUF
+26	config9: end-systolic_array
+27	config10: start-SIMD
+28	config11: start-IMM
+29	config12: start-IMM
+30	(M)loop3[0]: START=0; STOP=1; STRIDE=1; OFFSET:0
+31		(P)loop4[1]: START=0; STOP=1024; STRIDE=256; OFFSET:0
+32			(M)loop8[2]: START=0; STOP=1; STRIDE=1; OFFSET:0
+33				(P)loop9[3]: START=0; STOP=256; STRIDE=1; OFFSET:0
+34					compute1: SIMD-MUL(['gemm_out', 'm0'])->['out']
+35					compute2: SIMD-RSHIFT(['out', 'nshift'])->['out']
+36				loop9: END
+37			loop8: END
+38			transfer4: OPERAND: out[VMEM1->DRAM], SIZES: [[1, 256], [1, 1024]]
+39		loop4: END
+40	loop3: END
+41	config13: end-SIMD

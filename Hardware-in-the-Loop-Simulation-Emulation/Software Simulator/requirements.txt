@@ -1,0 +1,4 @@
+pandas
+fxpmath
+tqdm
+numpy

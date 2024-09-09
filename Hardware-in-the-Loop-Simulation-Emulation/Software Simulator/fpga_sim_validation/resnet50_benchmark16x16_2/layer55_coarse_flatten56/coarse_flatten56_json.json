@@ -1,0 +1,48 @@
+{
+  "mode": "inference",
+  "program": [
+    {
+      "operation": "coarse_flatten",
+      "instance_id": 56,
+      "iterable_dimensions": {},
+      "operation_parameters": {
+        "N": 1,
+        "C": 2048,
+        "H": 1,
+        "W": 1,
+        "OC": 2048
+      },
+      "inputs": [
+        {
+          "name": "data",
+          "unique_name": "globalaveragepool_119_493Y",
+          "dtype": "FXP32",
+          "shape_symbols": {
+            "N": 1,
+            "H": 1,
+            "W": 1,
+            "C": 2048
+          },
+          "data_path": [],
+          "tiling": {}
+        }
+      ],
+      "intermediate": [],
+      "outputs": [
+        {
+          "name": "out",
+          "unique_name": "flatten_120_494Y",
+          "dtype": "FXP32",
+          "shape_symbols": {
+            "N": 1,
+            "OC": 2048
+          },
+          "data_path": [],
+          "tiling": {}
+        }
+      ],
+      "operation_sequence": []
+    },
+    "BLOCK_END 1"
+  ]
+}

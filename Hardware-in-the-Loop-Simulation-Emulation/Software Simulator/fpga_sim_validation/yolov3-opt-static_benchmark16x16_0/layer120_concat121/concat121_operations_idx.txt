@@ -1,0 +1,4 @@
+// CODELET:	concat121
+inputs=op1['N', 'IC1', 'H', 'W'], op2['N', 'IC2', 'H', 'W']
+intermediates=
+outputs=out['N', 'OC', 'H', 'W']

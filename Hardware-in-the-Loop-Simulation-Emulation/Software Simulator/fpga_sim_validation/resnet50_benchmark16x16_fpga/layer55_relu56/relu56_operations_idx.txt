@@ -1,0 +1,26 @@
+// CODELET:	relu56
+inputs=op1['N', 'H', 'W', 'C']
+intermediates=imm_dummy['SIMD_SIZE']
+outputs=out['N', 'H', 'W', 'C']
+0	config0: start-SIMD
+1	config1: start-IMM
+2	(N)loop0[0]: START=0; STOP=1; STRIDE=1; OFFSET:0
+3		(C)loop1[1]: START=0; STOP=256; STRIDE=128; OFFSET:0
+4			(H)loop2[2]: START=0; STOP=14; STRIDE=14; OFFSET:0
+5				(W)loop3[3]: START=0; STOP=14; STRIDE=7; OFFSET:0
+6					transfer0: OPERAND: op1[DRAM->VMEM1], SIZES: [[1, 14, 14, 256], [1, 14, 7, 128]]
+7					(N)loop4[4]: START=0; STOP=1; STRIDE=1; OFFSET:0
+8						(C)loop5[5]: START=0; STOP=128; STRIDE=1; OFFSET:0
+9							(H)loop6[6]: START=0; STOP=14; STRIDE=1; OFFSET:0
+10								(W)loop7[7]: START=0; STOP=7; STRIDE=1; OFFSET:0
+11									compute0: SIMD-RELU(['op1', 'imm_dummy'])->['out']
+12								loop7: END
+13							loop6: END
+14						loop5: END
+15					loop4: END
+16					transfer1: OPERAND: out[VMEM2->DRAM], SIZES: [[1, 14, 7, 128], [1, 14, 14, 256]]
+17				loop3: END
+18			loop2: END
+19		loop1: END
+20	loop0: END
+21	config2: end-SIMD

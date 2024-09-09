@@ -1,0 +1,64 @@
+{
+  "mode": "inference",
+  "program": [
+    {
+      "operation": "concat",
+      "instance_id": 138,
+      "iterable_dimensions": {},
+      "operation_parameters": {
+        "N": 1,
+        "IC1": 128,
+        "IC2": 256,
+        "OC": 384,
+        "H": 52,
+        "W": 52
+      },
+      "inputs": [
+        {
+          "name": "op1",
+          "unique_name": "model_1_leaky_re_lu_66_LeakyRelu:0_permuted_upsampled",
+          "dtype": "FXP32",
+          "shape_symbols": {
+            "N": 1,
+            "IC1": 128,
+            "H": 52,
+            "W": 52
+          },
+          "data_path": [],
+          "tiling": {}
+        },
+        {
+          "name": "op2",
+          "unique_name": "model_1_add_11_add:0_Y",
+          "dtype": "FXP32",
+          "shape_symbols": {
+            "N": 1,
+            "IC2": 256,
+            "H": 52,
+            "W": 52
+          },
+          "data_path": [],
+          "tiling": {}
+        }
+      ],
+      "intermediate": [],
+      "outputs": [
+        {
+          "name": "out",
+          "unique_name": "model_1_concatenate_2_concat:0_Y",
+          "dtype": "FXP32",
+          "shape_symbols": {
+            "N": 1,
+            "OC": 384,
+            "H": 52,
+            "W": 52
+          },
+          "data_path": [],
+          "tiling": {}
+        }
+      ],
+      "operation_sequence": []
+    },
+    "BLOCK_END 1"
+  ]
+}
