@@ -1,0 +1,7 @@
+[submodule "Cross-Domain-Language-and-Compiler/codelets.src"]
+	path = Cross-Domain-Language-and-Compiler/codelets.src
+	url = https://github.com/he-actlab/codelets.src.git
+	branch = neuroweaver
+[submodule "Cross-Domain-Language-and-Compiler/polymath"]
+	path = Cross-Domain-Language-and-Compiler/polymath
+	url = https://github.com/he-actlab/polymath.git
